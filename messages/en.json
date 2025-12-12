@@ -159,6 +159,25 @@
   "whyUs": {
     "title": "Why ELEXIM?",
     "subtitle": "Experience, expertise and reliability",
+    "description": "We are part of the Czech company ELEXIM a.s. based in Kroměříž. Since 1999, we have been building a reputation as a reliable partner in electrical engineering, special applications and e-mobility. Our MyBox charging stations are developed and manufactured in the Czech Republic.",
+    "highlights": [
+      "Founded in 1999 with 100% Czech ownership",
+      "Headquarters in Kroměříž, branches in Slovakia and Hungary",
+      "Three divisions: Electrical Engineering, Special Applications, E-Mobility",
+      "Official distributor of ABB (since 2000) and Schneider Electric (since 2006)",
+      "ISO 9001 certification since 2011"
+    ],
+    "stats": {
+      "founded": "Year Founded",
+      "experience": "Years of Experience",
+      "divisions": "Company Divisions",
+      "myboxSince": "MyBox Brand Since"
+    },
+    "trustedBy": "Trusted by:",
+    "iso": {
+      "title": "ISO 9001:2015",
+      "description": "Certified quality management system since 2011"
+    },
     "experience": {
       "title": "25+ Years of Experience",
       "description": "ELEXIM Group has been in the market since 1999"

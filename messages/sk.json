@@ -159,6 +159,25 @@
   "whyUs": {
     "title": "Prečo ELEXIM?",
     "subtitle": "Skúsenosti, odbornosť a spoľahlivosť",
+    "description": "Sme súčasťou českej spoločnosti ELEXIM a.s. so sídlom v Kroměříži. Od roku 1999 budujeme povesť spoľahlivého partnera v oblasti elektrotechniky, špeciálnych aplikácií a elektromobility. Naše nabíjacie stanice MyBox sú vyvíjané a vyrábané v Česku.",
+    "highlights": [
+      "Založené v roku 1999 so 100% českým vlastníctvom",
+      "Sídlo v Kroměříži, pobočky na Slovensku a v Maďarsku",
+      "Tri divízie: Elektrotechnika, Špeciálne aplikácie, eMobilita",
+      "Oficiálny distribútor ABB (od 2000) a Schneider Electric (od 2006)",
+      "Certifikácia ISO 9001 od roku 2011"
+    ],
+    "stats": {
+      "founded": "Rok založenia",
+      "experience": "Rokov skúseností",
+      "divisions": "Divízie spoločnosti",
+      "myboxSince": "Vznik značky MyBox"
+    },
+    "trustedBy": "Dôverujú nám:",
+    "iso": {
+      "title": "ISO 9001:2015",
+      "description": "Certifikovaný systém riadenia kvality od roku 2011"
+    },
     "experience": {
       "title": "25+ rokov skúseností",
       "description": "Skupina ELEXIM pôsobí na trhu od roku 1999"

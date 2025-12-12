@@ -7,14 +7,6 @@ import { useRef, useEffect, useState } from "react";
 
 const clients = ["Škoda Auto", "ČEZ", "PRE", "ABB", "Schneider Electric"];
 
-const highlights = [
-  "Založené v roku 1999 so 100% českým vlastníctvom",
-  "Sídlo v Kroměříži, pobočky na Slovensku a v Maďarsku",
-  "Tri divízie: Elektrotechnika, Špeciálne aplikácie, eMobilita",
-  "Oficiálny distribútor ABB (od 2000) a Schneider Electric (od 2006)",
-  "Certifikácia ISO 9001 od roku 2011",
-];
-
 // Counter animation component
 function CountUp({
   end,
@@ -61,11 +53,13 @@ export default function WhyUs() {
   const statsRef = useRef(null);
   const isInView = useInView(statsRef, { once: true, margin: "-100px" });
 
+  const highlights = t.raw("highlights") as string[];
+
   const stats = [
-    { value: 1999, label: "Rok založenia", accent: false, suffix: "" },
-    { value: 25, label: "Rokov skúseností", accent: true, suffix: "+" },
-    { value: 3, label: "Divízie spoločnosti", accent: true, suffix: "" },
-    { value: 2017, label: "Vznik značky MyBox", accent: false, suffix: "" },
+    { value: 1999, labelKey: "stats.founded", accent: false, suffix: "" },
+    { value: 25, labelKey: "stats.experience", accent: true, suffix: "+" },
+    { value: 3, labelKey: "stats.divisions", accent: true, suffix: "" },
+    { value: 2017, labelKey: "stats.myboxSince", accent: false, suffix: "" },
   ];
 
   return (
@@ -84,10 +78,7 @@ export default function WhyUs() {
               {t("title")}
             </h2>
             <p className="text-lg text-secondary-600 mb-8 leading-relaxed">
-              Sme súčasťou českej spoločnosti ELEXIM a.s. so sídlom v Kroměříži.
-              Od roku 1999 budujeme povesť spoľahlivého partnera v oblasti elektrotechniky,
-              špeciálnych aplikácií a elektromobility. Naše nabíjacie stanice MyBox
-              sú vyvíjané a vyrábané v Česku.
+              {t("description")}
             </p>
 
             {/* Highlights */}
@@ -111,7 +102,7 @@ export default function WhyUs() {
 
             {/* Trusted by */}
             <div>
-              <p className="text-sm text-secondary-500 mb-4">Dôverujú nám:</p>
+              <p className="text-sm text-secondary-500 mb-4">{t("trustedBy")}</p>
               <div className="flex flex-wrap gap-x-6 gap-y-2">
                 {clients.map((client) => (
                   <span key={client} className="text-secondary-900 font-semibold">
@@ -134,7 +125,7 @@ export default function WhyUs() {
             <div className="grid grid-cols-2 gap-6">
               {stats.map((stat, i) => (
                 <motion.div
-                  key={stat.label}
+                  key={stat.labelKey}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -158,7 +149,7 @@ export default function WhyUs() {
                   <div className={`text-sm ${
                     stat.accent ? "text-white/80" : "text-secondary-600"
                   }`}>
-                    {stat.label}
+                    {t(stat.labelKey)}
                   </div>
                 </motion.div>
               ))}
@@ -176,8 +167,8 @@ export default function WhyUs() {
                 <span className="text-white font-bold text-xs">ISO</span>
               </div>
               <div>
-                <div className="font-semibold text-secondary-900">ISO 9001:2015</div>
-                <div className="text-sm text-secondary-600">Certifikovaný systém riadenia kvality od roku 2011</div>
+                <div className="font-semibold text-secondary-900">{t("iso.title")}</div>
+                <div className="text-sm text-secondary-600">{t("iso.description")}</div>
               </div>
             </motion.div>
           </motion.div>

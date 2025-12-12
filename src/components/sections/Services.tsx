@@ -79,7 +79,7 @@ export default function Services() {
                       {/* Arrow indicator */}
                       <div className="mt-5 flex items-center gap-2 text-primary-600 group-hover:text-white transition-colors duration-500">
                         <span className="text-sm font-medium opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-                          Zistiť viac
+                          {t("cta.button")}
                         </span>
                         <ArrowRight size={16} className="opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-300" />
                       </div>
@@ -101,10 +101,10 @@ export default function Services() {
         >
           <Link
             href="/sluzby"
-            className="group inline-flex items-center gap-3 text-secondary-900 hover:text-primary-600 transition-colors"
+            className="group flex flex-col sm:flex-row items-center gap-4 sm:gap-3 text-secondary-900 hover:text-primary-600 transition-colors text-center sm:text-left"
           >
-            <span className="text-lg font-semibold">{t("description")}</span>
-            <div className="w-10 h-10 rounded-full bg-primary-600 group-hover:bg-primary-700 flex items-center justify-center transition-colors">
+            <span className="text-base sm:text-lg font-semibold max-w-xs sm:max-w-none">{t("description")}</span>
+            <div className="w-10 h-10 rounded-full bg-primary-600 group-hover:bg-primary-700 flex items-center justify-center transition-colors flex-shrink-0">
               <ArrowRight size={18} className="text-white group-hover:translate-x-0.5 transition-transform" />
             </div>
           </Link>
