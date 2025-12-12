@@ -42,7 +42,7 @@ export default function LanguageSwitcher({ isScrolled = true, isMobile = false }
   if (isMobile) {
     return (
       <div className="flex items-center gap-2">
-        <Globe size={16} className="text-secondary-500" />
+        <Globe size={16} className="text-secondary-500 dark:text-secondary-400" />
         <div className="flex gap-1">
           {locales.map((loc) => (
             <button
@@ -50,8 +50,8 @@ export default function LanguageSwitcher({ isScrolled = true, isMobile = false }
               onClick={() => handleLocaleChange(loc)}
               className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                 locale === loc
-                  ? "text-primary-600 bg-primary-50"
-                  : "text-secondary-600 hover:text-primary-600 hover:bg-secondary-100"
+                  ? "text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-950/50"
+                  : "text-secondary-600 dark:text-secondary-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-secondary-100 dark:hover:bg-secondary-800"
               }`}
             >
               {loc.toUpperCase()}
@@ -69,7 +69,7 @@ export default function LanguageSwitcher({ isScrolled = true, isMobile = false }
         onClick={() => setIsOpen(!isOpen)}
         className={`flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg transition-all ${
           isScrolled
-            ? "text-secondary-600 hover:text-primary-600 hover:bg-secondary-100"
+            ? "text-secondary-600 dark:text-secondary-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-secondary-100 dark:hover:bg-secondary-800"
             : "text-white/80 hover:text-white hover:bg-white/10"
         }`}
       >
@@ -88,7 +88,7 @@ export default function LanguageSwitcher({ isScrolled = true, isMobile = false }
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 8, scale: 0.96 }}
             transition={{ duration: 0.15 }}
-            className="absolute right-0 mt-2 w-44 bg-white rounded-xl shadow-xl border border-secondary-100 py-2 z-50 overflow-hidden"
+            className="absolute right-0 mt-2 w-44 bg-white dark:bg-secondary-800 rounded-xl shadow-xl border border-secondary-100 dark:border-secondary-700 py-2 z-50 overflow-hidden"
           >
             {locales.map((loc, index) => (
               <motion.button
@@ -99,12 +99,12 @@ export default function LanguageSwitcher({ isScrolled = true, isMobile = false }
                 onClick={() => handleLocaleChange(loc)}
                 className={`w-full px-4 py-2.5 text-left text-sm flex items-center justify-between transition-colors ${
                   locale === loc
-                    ? "text-primary-600 font-medium bg-primary-50"
-                    : "text-secondary-700 hover:bg-secondary-50"
+                    ? "text-primary-600 dark:text-primary-400 font-medium bg-primary-50 dark:bg-primary-950/50"
+                    : "text-secondary-700 dark:text-secondary-300 hover:bg-secondary-50 dark:hover:bg-secondary-700"
                 }`}
               >
                 <span>{localeNames[loc]}</span>
-                <span className="text-xs text-secondary-400 uppercase">{loc}</span>
+                <span className="text-xs text-secondary-400 dark:text-secondary-500 uppercase">{loc}</span>
               </motion.button>
             ))}
           </motion.div>

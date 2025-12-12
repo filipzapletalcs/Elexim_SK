@@ -52,9 +52,9 @@ export default function ContactPageContent() {
       </section>
 
       {/* Contact Content */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="pt-12 pb-20 lg:pb-28 bg-white dark:bg-secondary-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -63,8 +63,8 @@ export default function ContactPageContent() {
               transition={{ duration: 0.6 }}
               className="flex"
             >
-              <div className="bg-secondary-50 rounded-2xl p-8 lg:p-10 flex flex-col w-full">
-                <h2 className="font-[family-name:var(--font-inter)] text-2xl font-bold text-secondary-900 mb-8">
+              <div className="bg-secondary-50 dark:bg-secondary-800 rounded-2xl p-8 lg:p-10 flex flex-col w-full">
+                <h2 className="font-[family-name:var(--font-inter)] text-2xl font-bold text-secondary-900 dark:text-secondary-100 mb-8">
                   {t("info.title")}
                 </h2>
 
@@ -74,8 +74,8 @@ export default function ContactPageContent() {
                       <MapPin size={20} className="text-white" />
                     </div>
                     <div>
-                      <div className="text-sm text-secondary-500 mb-1">{t("info.address")}</div>
-                      <div className="text-secondary-900 font-medium">{t("info.addressValue")}</div>
+                      <div className="text-sm text-secondary-500 dark:text-secondary-400 mb-1">{t("info.address")}</div>
+                      <div className="text-secondary-900 dark:text-secondary-100 font-medium">{t("info.addressValue")}</div>
                     </div>
                   </div>
 
@@ -84,8 +84,8 @@ export default function ContactPageContent() {
                       <Phone size={20} className="text-white" />
                     </div>
                     <div>
-                      <div className="text-sm text-secondary-500 mb-1">{t("info.phone")}</div>
-                      <a href="tel:+420573335009" className="text-secondary-900 font-medium hover:text-primary-600 transition-colors">
+                      <div className="text-sm text-secondary-500 dark:text-secondary-400 mb-1">{t("info.phone")}</div>
+                      <a href="tel:+420573335009" className="text-secondary-900 dark:text-secondary-100 font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                         +420 573 335 009
                       </a>
                     </div>
@@ -96,8 +96,8 @@ export default function ContactPageContent() {
                       <Mail size={20} className="text-white" />
                     </div>
                     <div>
-                      <div className="text-sm text-secondary-500 mb-1">{t("info.email")}</div>
-                      <a href="mailto:info@elexim.sk" className="text-secondary-900 font-medium hover:text-primary-600 transition-colors">
+                      <div className="text-sm text-secondary-500 dark:text-secondary-400 mb-1">{t("info.email")}</div>
+                      <a href="mailto:info@elexim.sk" className="text-secondary-900 dark:text-secondary-100 font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                         info@elexim.sk
                       </a>
                     </div>
@@ -108,23 +108,23 @@ export default function ContactPageContent() {
                       <Clock size={20} className="text-white" />
                     </div>
                     <div>
-                      <div className="text-sm text-secondary-500 mb-1">{t("info.hours")}</div>
-                      <div className="text-secondary-900 font-medium">{t("info.hoursValue")}</div>
+                      <div className="text-sm text-secondary-500 dark:text-secondary-400 mb-1">{t("info.hours")}</div>
+                      <div className="text-secondary-900 dark:text-secondary-100 font-medium">{t("info.hoursValue")}</div>
                     </div>
                   </div>
                 </div>
 
                 {/* Company Details */}
-                <div className="mt-auto pt-8 border-t border-secondary-200">
-                  <h3 className="font-semibold text-secondary-900 mb-4">ELEXIM SK, s.r.o.</h3>
+                <div className="mt-auto pt-8 border-t border-secondary-200 dark:border-secondary-700">
+                  <h3 className="font-semibold text-secondary-900 dark:text-secondary-100 mb-4">ELEXIM SK, s.r.o.</h3>
                   <div className="grid grid-cols-2 gap-6 text-sm">
                     <div>
-                      <div className="text-secondary-500 mb-1">{t("info.ico")}</div>
-                      <div className="text-secondary-900 font-medium">51 818 612</div>
+                      <div className="text-secondary-500 dark:text-secondary-400 mb-1">{t("info.ico")}</div>
+                      <div className="text-secondary-900 dark:text-secondary-100 font-medium">51 818 612</div>
                     </div>
                     <div>
-                      <div className="text-secondary-500 mb-1">{t("info.dic")}</div>
-                      <div className="text-secondary-900 font-medium">SK2120801155</div>
+                      <div className="text-secondary-500 dark:text-secondary-400 mb-1">{t("info.dic")}</div>
+                      <div className="text-secondary-900 dark:text-secondary-100 font-medium">SK2120801155</div>
                     </div>
                   </div>
                 </div>
@@ -139,20 +139,20 @@ export default function ContactPageContent() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="flex"
             >
-              <div className="bg-secondary-50 rounded-2xl p-8 lg:p-10 flex flex-col w-full">
+              <div className="bg-secondary-50 dark:bg-secondary-800 rounded-2xl p-8 lg:p-10 flex flex-col w-full">
                 {isSubmitted ? (
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     className="text-center py-12"
                   >
-                    <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-5">
-                      <CheckCircle size={32} className="text-primary-600" />
+                    <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center mx-auto mb-5">
+                      <CheckCircle size={32} className="text-primary-600 dark:text-primary-400" />
                     </div>
-                    <h3 className="text-xl font-bold text-secondary-900 mb-2">
+                    <h3 className="text-xl font-bold text-secondary-900 dark:text-secondary-100 mb-2">
                       {t("form.success")}
                     </h3>
-                    <p className="text-secondary-600 text-sm">
+                    <p className="text-secondary-600 dark:text-secondary-400 text-sm">
                       Ozveme sa vám čo najskôr.
                     </p>
                   </motion.div>
@@ -160,64 +160,64 @@ export default function ContactPageContent() {
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div>
-                        <label className="block text-sm font-medium text-secondary-700 mb-2">
+                        <label className="block text-sm font-medium text-secondary-700 dark:text-secondary-300 mb-2">
                           {t("form.name")} *
                         </label>
                         <input
                           type="text"
                           required
-                          className="w-full px-4 py-3 rounded-xl border border-secondary-200 bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-secondary-200 dark:border-secondary-600 bg-white dark:bg-secondary-700 dark:text-secondary-100 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-secondary-700 mb-2">
+                        <label className="block text-sm font-medium text-secondary-700 dark:text-secondary-300 mb-2">
                           {t("form.email")} *
                         </label>
                         <input
                           type="email"
                           required
-                          className="w-full px-4 py-3 rounded-xl border border-secondary-200 bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-secondary-200 dark:border-secondary-600 bg-white dark:bg-secondary-700 dark:text-secondary-100 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
                         />
                       </div>
                     </div>
 
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div>
-                        <label className="block text-sm font-medium text-secondary-700 mb-2">
+                        <label className="block text-sm font-medium text-secondary-700 dark:text-secondary-300 mb-2">
                           {t("form.phone")}
                         </label>
                         <input
                           type="tel"
-                          className="w-full px-4 py-3 rounded-xl border border-secondary-200 bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-secondary-200 dark:border-secondary-600 bg-white dark:bg-secondary-700 dark:text-secondary-100 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-secondary-700 mb-2">
+                        <label className="block text-sm font-medium text-secondary-700 dark:text-secondary-300 mb-2">
                           {t("form.company")}
                         </label>
                         <input
                           type="text"
-                          className="w-full px-4 py-3 rounded-xl border border-secondary-200 bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-secondary-200 dark:border-secondary-600 bg-white dark:bg-secondary-700 dark:text-secondary-100 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
                         />
                       </div>
                     </div>
 
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div>
-                        <label className="block text-sm font-medium text-secondary-700 mb-2">
+                        <label className="block text-sm font-medium text-secondary-700 dark:text-secondary-300 mb-2">
                           {t("form.customerType")}
                         </label>
-                        <select className="w-full px-4 py-3 rounded-xl border border-secondary-200 bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all">
+                        <select className="w-full px-4 py-3 rounded-xl border border-secondary-200 dark:border-secondary-600 bg-white dark:bg-secondary-700 dark:text-secondary-100 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all">
                           <option value="individual">{t("form.customerTypes.individual")}</option>
                           <option value="company">{t("form.customerTypes.company")}</option>
                           <option value="public">{t("form.customerTypes.public")}</option>
                         </select>
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-secondary-700 mb-2">
+                        <label className="block text-sm font-medium text-secondary-700 dark:text-secondary-300 mb-2">
                           {t("form.subject")}
                         </label>
-                        <select className="w-full px-4 py-3 rounded-xl border border-secondary-200 bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all">
+                        <select className="w-full px-4 py-3 rounded-xl border border-secondary-200 dark:border-secondary-600 bg-white dark:bg-secondary-700 dark:text-secondary-100 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all">
                           <option value="consulting">{t("form.subjects.consulting")}</option>
                           <option value="delivery">{t("form.subjects.delivery")}</option>
                           <option value="installation">{t("form.subjects.installation")}</option>
@@ -228,13 +228,13 @@ export default function ContactPageContent() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-secondary-700 mb-2">
+                      <label className="block text-sm font-medium text-secondary-700 dark:text-secondary-300 mb-2">
                         {t("form.message")} *
                       </label>
                       <textarea
                         required
                         rows={5}
-                        className="w-full px-4 py-3 rounded-xl border border-secondary-200 bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all resize-none"
+                        className="w-full px-4 py-3 rounded-xl border border-secondary-200 dark:border-secondary-600 bg-white dark:bg-secondary-700 dark:text-secondary-100 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all resize-none"
                       />
                     </div>
 
@@ -243,9 +243,9 @@ export default function ContactPageContent() {
                         type="checkbox"
                         required
                         id="gdpr"
-                        className="mt-1 w-4 h-4 rounded border-secondary-300 text-primary-600 focus:ring-primary-500"
+                        className="mt-1 w-4 h-4 rounded border-secondary-300 dark:border-secondary-600 text-primary-600 focus:ring-primary-500 dark:bg-secondary-700"
                       />
-                      <label htmlFor="gdpr" className="text-sm text-secondary-600">
+                      <label htmlFor="gdpr" className="text-sm text-secondary-600 dark:text-secondary-400">
                         {t("form.gdpr")} *
                       </label>
                     </div>

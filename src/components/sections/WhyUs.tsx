@@ -63,7 +63,7 @@ export default function WhyUs() {
   ];
 
   return (
-    <section id="o-nas" className="py-24 lg:py-32 bg-secondary-50 relative overflow-hidden">
+    <section id="o-nas" className="py-24 lg:py-32 bg-secondary-50 dark:bg-secondary-950 relative overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left side - Content */}
@@ -74,10 +74,10 @@ export default function WhyUs() {
             transition={{ duration: 0.6 }}
           >
             <div className="h-1 w-16 bg-primary-500 mb-6" />
-            <h2 className="font-[family-name:var(--font-inter)] text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-600 mb-6">
+            <h2 className="font-[family-name:var(--font-inter)] text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-600 dark:text-secondary-100 mb-6">
               {t("title")}
             </h2>
-            <p className="text-lg text-secondary-600 mb-8 leading-relaxed">
+            <p className="text-lg text-secondary-600 dark:text-secondary-400 mb-8 leading-relaxed">
               {t("description")}
             </p>
 
@@ -95,17 +95,17 @@ export default function WhyUs() {
                   <div className="w-5 h-5 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check size={12} className="text-white" />
                   </div>
-                  <span className="text-secondary-700">{item}</span>
+                  <span className="text-secondary-700 dark:text-secondary-300">{item}</span>
                 </motion.li>
               ))}
             </ul>
 
             {/* Trusted by */}
             <div>
-              <p className="text-sm text-secondary-500 mb-4">{t("trustedBy")}</p>
+              <p className="text-sm text-secondary-500 dark:text-secondary-400 mb-4">{t("trustedBy")}</p>
               <div className="flex flex-wrap gap-x-6 gap-y-2">
                 {clients.map((client) => (
-                  <span key={client} className="text-secondary-900 font-semibold">
+                  <span key={client} className="text-secondary-900 dark:text-secondary-200 font-semibold">
                     {client}
                   </span>
                 ))}
@@ -133,7 +133,7 @@ export default function WhyUs() {
                   className={`relative p-6 rounded-2xl overflow-hidden ${
                     stat.accent
                       ? "bg-primary-600 text-white"
-                      : "bg-white border border-secondary-200"
+                      : "bg-white dark:bg-secondary-800 border border-secondary-200 dark:border-secondary-700"
                   }`}
                 >
                   {/* Grid pattern overlay */}
@@ -147,7 +147,7 @@ export default function WhyUs() {
                   </div>
                   <div className="relative">
                     <div className={`text-4xl lg:text-5xl font-bold font-[family-name:var(--font-inter)] mb-2 ${
-                      stat.accent ? "text-white" : "text-secondary-900"
+                      stat.accent ? "text-white" : "text-secondary-900 dark:text-secondary-100"
                     }`}>
                       <CountUp
                         end={stat.value}
@@ -157,7 +157,7 @@ export default function WhyUs() {
                       />
                     </div>
                     <div className={`text-sm ${
-                      stat.accent ? "text-white/80" : "text-secondary-600"
+                      stat.accent ? "text-white/80" : "text-secondary-600 dark:text-secondary-400"
                     }`}>
                       {t(stat.labelKey)}
                     </div>
@@ -172,7 +172,7 @@ export default function WhyUs() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6, duration: 0.4 }}
-              className="relative mt-6 p-5 bg-white rounded-2xl border border-secondary-200 flex items-center gap-4 overflow-hidden"
+              className="relative mt-6 p-5 bg-white dark:bg-secondary-800 rounded-2xl border border-secondary-200 dark:border-secondary-700 flex items-center gap-4 overflow-hidden"
             >
               {/* Grid pattern overlay */}
               <div className="absolute inset-0 opacity-[0.03]">
@@ -187,8 +187,8 @@ export default function WhyUs() {
                 <span className="text-white font-bold text-xs">ISO</span>
               </div>
               <div className="relative">
-                <div className="font-semibold text-secondary-900">{t("iso.title")}</div>
-                <div className="text-sm text-secondary-600">{t("iso.description")}</div>
+                <div className="font-semibold text-secondary-900 dark:text-secondary-100">{t("iso.title")}</div>
+                <div className="text-sm text-secondary-600 dark:text-secondary-400">{t("iso.description")}</div>
               </div>
             </motion.div>
           </motion.div>

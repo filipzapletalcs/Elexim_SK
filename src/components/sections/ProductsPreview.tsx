@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight, Battery, Zap } from "lucide-react";
+import { ArrowRight, Zap } from "lucide-react";
 
 const featuredProducts = [
   { key: "home", image: "/home_studio_web_cam_4-0000.png", type: "ac" },
@@ -17,11 +17,11 @@ export default function ProductsPreview() {
   const t = useTranslations("products");
 
   return (
-    <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
+    <section className="py-24 lg:py-32 bg-white dark:bg-secondary-900 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-secondary-50 to-transparent" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-500/5 rounded-full blur-[100px]" />
+        <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-secondary-50 dark:from-secondary-800 to-transparent" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-500/5 dark:bg-primary-500/10 rounded-full blur-[100px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,18 +35,11 @@ export default function ProductsPreview() {
         >
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2.5 rounded-xl bg-emerald-100">
-                  <Battery size={20} className="text-emerald-600" />
-                </div>
-                <span className="text-sm font-medium text-emerald-600 uppercase tracking-wider">
-                  MyBox
-                </span>
-              </div>
-              <h2 className="font-[family-name:var(--font-inter)] text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-600 mb-4">
+              <div className="h-1 w-16 bg-primary-500 mb-6" />
+              <h2 className="font-[family-name:var(--font-inter)] text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-600 dark:text-secondary-100 mb-4">
                 {t("title")}
               </h2>
-              <p className="text-lg text-secondary-600 max-w-2xl">
+              <p className="text-lg text-secondary-600 dark:text-secondary-400 max-w-2xl">
                 {t("description")}
               </p>
             </div>
@@ -72,7 +65,7 @@ export default function ProductsPreview() {
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >
               <Link href="/produkty" className="group block">
-                <div className="bg-gradient-to-b from-secondary-50 to-white rounded-2xl sm:rounded-3xl overflow-hidden border border-secondary-100 hover:border-primary-200 hover:shadow-xl transition-all duration-500">
+                <div className="bg-gradient-to-b from-secondary-50 to-white dark:from-secondary-800 dark:to-secondary-800 rounded-2xl sm:rounded-3xl overflow-hidden border border-secondary-100 dark:border-secondary-700 hover:border-primary-200 dark:hover:border-primary-700 hover:shadow-xl transition-all duration-500">
                   {/* Product Image */}
                   <div className="relative aspect-square p-3 sm:p-6">
                     <Image
@@ -84,19 +77,19 @@ export default function ProductsPreview() {
                   </div>
 
                   {/* Product Info */}
-                  <div className="p-3 sm:p-5 border-t border-secondary-100 bg-white">
+                  <div className="p-3 sm:p-5 border-t border-secondary-100 dark:border-secondary-700 bg-white dark:bg-secondary-800">
                     <div className="flex items-center justify-between gap-2">
                       <div className="min-w-0">
-                        <h3 className="font-[family-name:var(--font-inter)] text-sm sm:text-base font-bold text-secondary-900 group-hover:text-primary-600 transition-colors truncate">
+                        <h3 className="font-[family-name:var(--font-inter)] text-sm sm:text-base font-bold text-secondary-900 dark:text-secondary-100 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors truncate">
                           {t(`${product.key}.name`)}
                         </h3>
-                        <p className="text-xs sm:text-sm text-secondary-500">
+                        <p className="text-xs sm:text-sm text-secondary-500 dark:text-secondary-400">
                           {t(`${product.key}.power`)}
                         </p>
                       </div>
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-secondary-100 group-hover:bg-primary-100 flex items-center justify-center transition-colors flex-shrink-0">
-                        <ArrowRight size={16} className="sm:hidden text-secondary-500 group-hover:text-primary-600 group-hover:translate-x-0.5 transition-all" />
-                        <ArrowRight size={18} className="hidden sm:block text-secondary-500 group-hover:text-primary-600 group-hover:translate-x-0.5 transition-all" />
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-secondary-100 dark:bg-secondary-700 group-hover:bg-primary-100 dark:group-hover:bg-primary-900/50 flex items-center justify-center transition-colors flex-shrink-0">
+                        <ArrowRight size={16} className="sm:hidden text-secondary-500 dark:text-secondary-400 group-hover:text-primary-600 dark:group-hover:text-primary-400 group-hover:translate-x-0.5 transition-all" />
+                        <ArrowRight size={18} className="hidden sm:block text-secondary-500 dark:text-secondary-400 group-hover:text-primary-600 dark:group-hover:text-primary-400 group-hover:translate-x-0.5 transition-all" />
                       </div>
                     </div>
                   </div>
@@ -155,7 +148,7 @@ export default function ProductsPreview() {
                   <p className="text-secondary-300 mb-6 max-w-lg">
                     {t("dc.description")}
                   </p>
-                  <span className="inline-flex items-center gap-2 text-white font-semibold group-hover:text-primary-400 transition-colors">
+                  <span className="inline-flex items-center gap-2 text-white font-semibold group-hover:text-secondary-200 transition-colors">
                     {t("viewAll")}
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                   </span>

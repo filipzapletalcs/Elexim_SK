@@ -40,13 +40,13 @@ export default function ProductCard({
       transition={{ delay: index * 0.1, duration: 0.5 }}
       className="group h-full"
     >
-      <div className="h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-secondary-200/60">
+      <div className="h-full flex flex-col bg-white dark:bg-secondary-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-secondary-200/60 dark:border-secondary-700/60">
         {/* Product Image */}
         <div
           className={`relative aspect-square ${
             isAC
-              ? "bg-gradient-to-b from-secondary-100/80 to-secondary-50/50"
-              : "bg-[#e8e8e8]"
+              ? "bg-gradient-to-b from-secondary-100/80 to-secondary-50/50 dark:from-secondary-700/80 dark:to-secondary-800/50"
+              : "bg-[#e8e8e8] dark:bg-secondary-700"
           }`}
         >
           <Image
@@ -61,14 +61,14 @@ export default function ProductCard({
         <div className="flex flex-col flex-1 p-5 pt-4">
           {/* Header: Name + Power Badge */}
           <div className="flex items-start justify-between gap-3 mb-3">
-            <h3 className="font-[family-name:var(--font-inter)] text-lg font-bold text-secondary-900 leading-tight">
+            <h3 className="font-[family-name:var(--font-inter)] text-lg font-bold text-secondary-900 dark:text-secondary-100 leading-tight">
               {name}
             </h3>
             <span
               className={`flex-shrink-0 px-2.5 py-1 text-xs font-semibold rounded-full whitespace-nowrap ${
                 isAC
-                  ? "bg-primary-100 text-primary-700"
-                  : "bg-amber-100 text-amber-700"
+                  ? "bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300"
+                  : "bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300"
               }`}
             >
               {power}
@@ -76,24 +76,24 @@ export default function ProductCard({
           </div>
 
           {/* Description - fixed height */}
-          <p className="text-secondary-500 text-sm leading-relaxed mb-4 line-clamp-2 min-h-[2.5rem]">
+          <p className="text-secondary-500 dark:text-secondary-400 text-sm leading-relaxed mb-4 line-clamp-2 min-h-[2.5rem]">
             {description}
           </p>
 
           {/* Divider */}
-          <div className="w-full h-px bg-secondary-100 mb-4" />
+          <div className="w-full h-px bg-secondary-100 dark:bg-secondary-700 mb-4" />
 
           {/* Features - always 3 items for consistency */}
           <ul className="space-y-2.5 mb-5 flex-1 min-h-[5.5rem]">
             {features.slice(0, 3).map((feature, i) => (
               <li
                 key={i}
-                className="flex items-start gap-2.5 text-sm text-secondary-600"
+                className="flex items-start gap-2.5 text-sm text-secondary-600 dark:text-secondary-400"
               >
                 <Check
                   size={14}
                   className={`flex-shrink-0 mt-0.5 ${
-                    isAC ? "text-primary-500" : "text-amber-500"
+                    isAC ? "text-primary-500 dark:text-primary-400" : "text-amber-500 dark:text-amber-400"
                   }`}
                 />
                 <span className="leading-snug">{feature}</span>
@@ -114,7 +114,7 @@ export default function ProductCard({
               href={detailUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 text-sm text-secondary-500 hover:text-primary-600 transition-colors"
+              className="inline-flex items-center justify-center gap-1.5 text-sm text-secondary-500 dark:text-secondary-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             >
               {detailText}
               <ExternalLink size={12} />

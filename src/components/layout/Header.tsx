@@ -7,6 +7,7 @@ import { Link, usePathname } from "@/i18n/routing";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageSwitcher from "./LanguageSwitcher";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 export default function Header() {
   const t = useTranslations("navigation");
@@ -36,7 +37,7 @@ export default function Header() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-lg shadow-sm"
+          ? "bg-white/90 dark:bg-secondary-900/90 backdrop-blur-lg shadow-sm dark:shadow-secondary-950/20"
           : "bg-transparent"
       }`}
     >
@@ -50,7 +51,7 @@ export default function Header() {
               width={140}
               height={40}
               className={`h-8 md:h-10 w-auto transition-all duration-300 ${
-                !isScrolled ? "brightness-0 invert" : ""
+                !isScrolled ? "brightness-0 invert" : "dark:brightness-0 dark:invert"
               }`}
               priority
             />
@@ -64,12 +65,12 @@ export default function Header() {
                 href={item.href}
                 className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
                   isScrolled
-                    ? "text-secondary-700 hover:text-primary-600 hover:bg-secondary-100"
+                    ? "text-secondary-700 dark:text-secondary-200 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-secondary-100 dark:hover:bg-secondary-800"
                     : "text-white/90 hover:text-white hover:bg-white/10"
                 } ${
                   pathname === item.href
                     ? isScrolled
-                      ? "text-primary-600"
+                      ? "text-primary-600 dark:text-primary-400"
                       : "text-white"
                     : ""
                 }`}
@@ -81,12 +82,13 @@ export default function Header() {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-3">
+            <ThemeToggle isScrolled={isScrolled} />
             <LanguageSwitcher isScrolled={isScrolled} />
             <Link
               href="/kontakt"
               className={`group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
                 isScrolled
-                  ? "bg-primary-600 text-white hover:bg-primary-700 hover:shadow-lg hover:shadow-primary-500/25"
+                  ? "bg-primary-600 text-white hover:bg-primary-700 hover:shadow-lg hover:shadow-primary-500/25 dark:bg-white dark:text-primary-600 dark:hover:bg-white/90 dark:hover:shadow-white/10"
                   : "bg-white text-primary-600 hover:bg-white/90"
               }`}
             >
@@ -100,7 +102,7 @@ export default function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={`md:hidden p-2 rounded-lg transition-colors ${
               isScrolled
-                ? "text-secondary-700 hover:bg-secondary-100"
+                ? "text-secondary-700 dark:text-secondary-200 hover:bg-secondary-100 dark:hover:bg-secondary-800"
                 : "text-white hover:bg-white/10"
             }`}
             aria-label="Toggle menu"
@@ -117,7 +119,7 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-secondary-100 overflow-hidden"
+            className="md:hidden bg-white dark:bg-secondary-900 border-t border-secondary-100 dark:border-secondary-700 overflow-hidden"
           >
             <nav className="px-4 py-6 space-y-2">
               {navItems.map((item, index) => (
@@ -132,8 +134,8 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                     className={`block py-3 px-4 text-base font-medium rounded-xl transition-colors ${
                       pathname === item.href
-                        ? "text-primary-600 bg-primary-50"
-                        : "text-secondary-700 hover:text-primary-600 hover:bg-secondary-50"
+                        ? "text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-950/50"
+                        : "text-secondary-700 dark:text-secondary-200 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-secondary-50 dark:hover:bg-secondary-800"
                     }`}
                   >
                     {item.label}
@@ -144,9 +146,10 @@ export default function Header() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
-                className="pt-4 border-t border-secondary-100"
+                className="pt-4 border-t border-secondary-100 dark:border-secondary-700 flex items-center justify-between"
               >
                 <LanguageSwitcher isScrolled={true} isMobile={true} />
+                <ThemeToggle isScrolled={true} showLabel />
               </motion.div>
             </nav>
           </motion.div>

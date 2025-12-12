@@ -131,7 +131,7 @@ export default function ServicesPageContent() {
       </section>
 
       {/* Process Section - "Ako to funguje" */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-20 lg:py-28 bg-white dark:bg-secondary-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <motion.div
@@ -142,17 +142,17 @@ export default function ServicesPageContent() {
             className="text-center mb-16"
           >
             <div className="h-1 w-16 bg-primary-500 mx-auto mb-6" />
-            <h2 className="font-[family-name:var(--font-inter)] text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-600 mb-5">
+            <h2 className="font-[family-name:var(--font-inter)] text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-600 dark:text-secondary-100 mb-5">
               {t("process.title")}
             </h2>
-            <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
+            <p className="text-lg text-secondary-600 dark:text-secondary-400 max-w-2xl mx-auto">
               {t("process.subtitle")}
             </p>
           </motion.div>
 
           {/* Timeline - Desktop */}
           <div className="hidden lg:block relative">
-            <div className="absolute top-8 left-0 right-0 h-px bg-secondary-200" />
+            <div className="absolute top-8 left-0 right-0 h-px bg-secondary-200 dark:bg-secondary-700" />
             <div className="grid grid-cols-6 gap-4">
               {processSteps.map((step, index) => {
                 const Icon = step.icon;
@@ -165,16 +165,16 @@ export default function ServicesPageContent() {
                     transition={{ delay: index * 0.1 }}
                     className="relative text-center"
                   >
-                    <div className="relative z-10 w-16 h-16 mx-auto mb-6 rounded-2xl bg-white border-2 border-primary-200 flex items-center justify-center shadow-sm hover:border-primary-500 hover:shadow-md transition-all duration-300">
-                      <Icon size={24} className="text-primary-600" />
+                    <div className="relative z-10 w-16 h-16 mx-auto mb-6 rounded-2xl bg-white dark:bg-secondary-800 border-2 border-primary-200 dark:border-secondary-700 flex items-center justify-center shadow-sm hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-md transition-all duration-300">
+                      <Icon size={24} className="text-primary-600 dark:text-white" />
                       <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-primary-600 text-white text-xs font-bold flex items-center justify-center">
                         {index + 1}
                       </span>
                     </div>
-                    <h4 className="font-semibold text-secondary-900 mb-2">
+                    <h4 className="font-semibold text-secondary-900 dark:text-secondary-100 mb-2">
                       {t(`process.steps.${step.key}.title`)}
                     </h4>
-                    <p className="text-sm text-secondary-500 leading-relaxed">
+                    <p className="text-sm text-secondary-500 dark:text-secondary-400 leading-relaxed">
                       {t(`process.steps.${step.key}.description`)}
                     </p>
                   </motion.div>
@@ -198,17 +198,17 @@ export default function ServicesPageContent() {
                   className="relative flex gap-4"
                 >
                   <div className="flex flex-col items-center">
-                    <div className="w-12 h-12 rounded-xl bg-white border-2 border-primary-200 flex items-center justify-center shadow-sm">
-                      <Icon size={20} className="text-primary-600" />
+                    <div className="w-12 h-12 rounded-xl bg-white dark:bg-secondary-800 border-2 border-primary-200 dark:border-secondary-700 flex items-center justify-center shadow-sm">
+                      <Icon size={20} className="text-primary-600 dark:text-white" />
                     </div>
-                    {!isLast && <div className="w-px flex-1 bg-primary-200 my-2" />}
+                    {!isLast && <div className="w-px flex-1 bg-primary-200 dark:bg-secondary-700 my-2" />}
                   </div>
                   <div className={`flex-1 ${isLast ? "" : "pb-6"}`}>
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-xs font-bold text-primary-600">{String(index + 1).padStart(2, "0")}</span>
-                      <h4 className="font-semibold text-secondary-900">{t(`process.steps.${step.key}.title`)}</h4>
+                      <span className="text-xs font-bold text-primary-600 dark:text-primary-400">{String(index + 1).padStart(2, "0")}</span>
+                      <h4 className="font-semibold text-secondary-900 dark:text-secondary-100">{t(`process.steps.${step.key}.title`)}</h4>
                     </div>
-                    <p className="text-sm text-secondary-600">{t(`process.steps.${step.key}.description`)}</p>
+                    <p className="text-sm text-secondary-600 dark:text-secondary-400">{t(`process.steps.${step.key}.description`)}</p>
                   </div>
                 </motion.div>
               );
@@ -222,14 +222,14 @@ export default function ServicesPageContent() {
             viewport={{ once: true }}
             className="mt-16"
           >
-            <div className="bg-secondary-50 rounded-2xl p-8 lg:p-10 border border-secondary-100 flex flex-col lg:flex-row items-center justify-between gap-6">
+            <div className="bg-secondary-50 dark:bg-secondary-800 rounded-2xl p-8 lg:p-10 border border-secondary-100 dark:border-secondary-700 flex flex-col lg:flex-row items-center justify-between gap-6">
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 rounded-xl bg-primary-600 flex items-center justify-center">
                   <CheckCircle2 size={28} className="text-white" />
                 </div>
                 <div>
-                  <p className="text-xl font-bold text-secondary-900">{t("process.cta.title")}</p>
-                  <p className="text-secondary-600">{t("process.cta.subtitle")}</p>
+                  <p className="text-xl font-bold text-secondary-900 dark:text-secondary-100">{t("process.cta.title")}</p>
+                  <p className="text-secondary-600 dark:text-secondary-400">{t("process.cta.subtitle")}</p>
                 </div>
               </div>
               <Link
@@ -265,7 +265,7 @@ export default function ServicesPageContent() {
                 >
                   {/* Image */}
                   <div className={`${isEven ? "lg:order-1" : "lg:order-2"}`}>
-                    <div className={`relative aspect-[4/3] rounded-3xl overflow-hidden ${service.key === "integration" ? "bg-secondary-100" : "shadow-2xl"}`}>
+                    <div className={`relative aspect-[4/3] rounded-3xl overflow-hidden ${service.key === "integration" ? "bg-secondary-100 dark:bg-secondary-800" : "shadow-2xl"}`}>
                       <Image
                         src={service.image}
                         alt={t(`${service.key}.title`)}
@@ -280,13 +280,13 @@ export default function ServicesPageContent() {
 
                   {/* Content */}
                   <div className={`${isEven ? "lg:order-2" : "lg:order-1"}`}>
-                    <div className="inline-flex p-3 rounded-2xl bg-primary-100 text-primary-600 mb-6">
+                    <div className="inline-flex p-3 rounded-2xl bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400 mb-6">
                       <Icon size={28} />
                     </div>
-                    <h2 className="font-[family-name:var(--font-inter)] text-3xl lg:text-4xl font-bold text-primary-600 mb-4">
+                    <h2 className="font-[family-name:var(--font-inter)] text-3xl lg:text-4xl font-bold text-primary-600 dark:text-secondary-100 mb-4">
                       {t(`${service.key}.title`)}
                     </h2>
-                    <p className="text-lg text-secondary-600 leading-relaxed mb-8">
+                    <p className="text-lg text-secondary-600 dark:text-secondary-400 leading-relaxed mb-8">
                       {t(`${service.key}.description`)}
                     </p>
 
@@ -294,10 +294,10 @@ export default function ServicesPageContent() {
                     <ul className="space-y-3">
                       {(t.raw(`${service.key}.features`) as string[]).map((feature, i) => (
                         <li key={i} className="flex items-center gap-3">
-                          <div className="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center">
-                            <Check size={12} className="text-primary-600" />
+                          <div className="w-5 h-5 rounded-full bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center">
+                            <Check size={12} className="text-primary-600 dark:text-primary-400" />
                           </div>
-                          <span className="text-secondary-700">{feature}</span>
+                          <span className="text-secondary-700 dark:text-secondary-300">{feature}</span>
                         </li>
                       ))}
                     </ul>

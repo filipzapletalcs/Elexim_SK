@@ -139,20 +139,20 @@ export default function ProductsPageContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 0.5 }}
-                className="absolute -bottom-6 -right-6 lg:right-8 bg-white rounded-2xl shadow-xl p-6 border border-secondary-100"
+                className="absolute -bottom-6 -right-6 lg:right-8 bg-white dark:bg-secondary-800 rounded-2xl shadow-xl p-6 border border-secondary-100 dark:border-secondary-700"
               >
                 <div className="grid grid-cols-3 gap-6">
                   <div className="text-center">
-                    <div className="text-2xl lg:text-3xl font-bold text-primary-600">2017</div>
-                    <div className="text-xs text-secondary-500 mt-1">{t("mybox.stats.since")}</div>
+                    <div className="text-2xl lg:text-3xl font-bold text-primary-600 dark:text-primary-400">2017</div>
+                    <div className="text-xs text-secondary-500 dark:text-secondary-400 mt-1">{t("mybox.stats.since")}</div>
                   </div>
-                  <div className="text-center border-x border-secondary-100 px-4">
-                    <div className="text-2xl lg:text-3xl font-bold text-primary-600">500+</div>
-                    <div className="text-xs text-secondary-500 mt-1">{t("mybox.stats.installations")}</div>
+                  <div className="text-center border-x border-secondary-100 dark:border-secondary-700 px-4">
+                    <div className="text-2xl lg:text-3xl font-bold text-primary-600 dark:text-primary-400">500+</div>
+                    <div className="text-xs text-secondary-500 dark:text-secondary-400 mt-1">{t("mybox.stats.installations")}</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl lg:text-3xl font-bold text-primary-600">5</div>
-                    <div className="text-xs text-secondary-500 mt-1">{t("mybox.stats.countries")}</div>
+                    <div className="text-2xl lg:text-3xl font-bold text-primary-600 dark:text-primary-400">5</div>
+                    <div className="text-xs text-secondary-500 dark:text-secondary-400 mt-1">{t("mybox.stats.countries")}</div>
                   </div>
                 </div>
               </motion.div>
@@ -174,7 +174,7 @@ export default function ProductsPageContent() {
                   className="h-14 w-auto"
                 />
               </div>
-              <p className="text-lg text-secondary-600 leading-relaxed mb-8">
+              <p className="text-lg text-secondary-600 dark:text-secondary-400 leading-relaxed mb-8">
                 {t("mybox.description")}
               </p>
 
@@ -190,16 +190,16 @@ export default function ProductsPageContent() {
                   return (
                     <div
                       key={feature.key}
-                      className="flex items-start gap-4 p-4 rounded-xl bg-secondary-50/70 hover:bg-secondary-100/70 transition-colors"
+                      className="flex items-start gap-4 p-4 rounded-xl bg-secondary-50/70 dark:bg-secondary-800/70 hover:bg-secondary-100/70 dark:hover:bg-secondary-700/70 transition-colors"
                     >
-                      <div className="p-2.5 rounded-lg bg-primary-100 text-primary-600 flex-shrink-0">
+                      <div className="p-2.5 rounded-lg bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400 flex-shrink-0">
                         <Icon size={20} />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-secondary-900 mb-1">
+                        <h3 className="font-semibold text-secondary-900 dark:text-secondary-100 mb-1">
                           {t(`mybox.features.${feature.key}.title`)}
                         </h3>
-                        <p className="text-sm text-secondary-500">
+                        <p className="text-sm text-secondary-500 dark:text-secondary-400">
                           {t(`mybox.features.${feature.key}.description`)}
                         </p>
                       </div>
@@ -212,7 +212,7 @@ export default function ProductsPageContent() {
                 href="https://mybox.eco"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+                className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 font-semibold hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
               >
                 mybox.eco
                 <ExternalLink size={16} />
@@ -223,7 +223,7 @@ export default function ProductsPageContent() {
       </section>
 
       {/* AC Charging Stations */}
-      <section className="py-20 lg:py-28 bg-secondary-50">
+      <section className="py-20 lg:py-28 bg-secondary-50 dark:bg-secondary-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <motion.div
@@ -233,17 +233,17 @@ export default function ProductsPageContent() {
             className="mb-12"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2.5 rounded-xl bg-primary-100">
-                <Battery size={20} className="text-primary-600" />
+              <div className="p-2.5 rounded-xl bg-primary-100 dark:bg-primary-900/50">
+                <Battery size={20} className="text-primary-600 dark:text-primary-400" />
               </div>
-              <span className="text-sm font-semibold text-primary-600 uppercase tracking-wider">
+              <span className="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider">
                 {t("ac.subtitle")}
               </span>
             </div>
-            <h2 className="font-[family-name:var(--font-inter)] text-3xl lg:text-4xl font-bold text-primary-600 mb-4">
+            <h2 className="font-[family-name:var(--font-inter)] text-3xl lg:text-4xl font-bold text-primary-600 dark:text-secondary-100 mb-4">
               {t("ac.title")}
             </h2>
-            <p className="text-lg text-secondary-500 max-w-2xl">
+            <p className="text-lg text-secondary-500 dark:text-secondary-400 max-w-2xl">
               {t("ac.description")}
             </p>
           </motion.div>
@@ -270,7 +270,7 @@ export default function ProductsPageContent() {
       </section>
 
       {/* DC Fast Chargers */}
-      <section className="py-20 lg:py-28 bg-secondary-50">
+      <section className="py-20 lg:py-28 bg-secondary-50 dark:bg-secondary-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <motion.div
@@ -280,17 +280,17 @@ export default function ProductsPageContent() {
             className="mb-12"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2.5 rounded-xl bg-amber-100">
-                <Zap size={20} className="text-amber-600" />
+              <div className="p-2.5 rounded-xl bg-amber-100 dark:bg-amber-900/50">
+                <Zap size={20} className="text-amber-600 dark:text-amber-400" />
               </div>
-              <span className="text-sm font-semibold text-amber-600 uppercase tracking-wider">
+              <span className="text-sm font-semibold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
                 {t("dc.subtitle")}
               </span>
             </div>
-            <h2 className="font-[family-name:var(--font-inter)] text-3xl lg:text-4xl font-bold text-primary-600 mb-4">
+            <h2 className="font-[family-name:var(--font-inter)] text-3xl lg:text-4xl font-bold text-primary-600 dark:text-secondary-100 mb-4">
               {t("dc.title")}
             </h2>
-            <p className="text-lg text-secondary-500 max-w-2xl">
+            <p className="text-lg text-secondary-500 dark:text-secondary-400 max-w-2xl">
               {t("dc.description")}
             </p>
           </motion.div>
