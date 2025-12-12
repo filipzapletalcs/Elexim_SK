@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "title": "ELEXIM SK | Nabíjacia infraštruktúra pre elektromobily",
+    "description": "Komplexné riešenia pre elektromobilitu na Slovensku - návrh, dodávka, inštalácia a servis nabíjacích staníc."
+  },
+  "navigation": {
+    "home": "Domov",
+    "services": "Služby",
+    "products": "Produkty",
+    "about": "O nás",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "line1": "Nabíjacia infraštruktúra",
+    "line2": "pre budúcnosť",
+    "subtitle": "Dodávame a inštalujeme nabíjacie stanice pre elektromobily. Od domácich wallboxov až po verejné DC rýchlonabíjačky - kompletné riešenia na kľúč.",
+    "cta": "Získať ponuku",
+    "ctaSecondary": "Naše produkty",
+    "scroll": "Zistiť viac",
+    "stats": {
+      "years": "rokov skúseností",
+      "projects": "realizácií",
+      "countries": "krajín"
+    }
+  },
+  "services": {
+    "title": "Naše služby",
+    "subtitle": "Komplexná starostlivosť o vašu nabíjaciu infraštruktúru",
+    "description": "Od prvotnej konzultácie až po dlhodobý servis - postaráme sa o všetko",
+    "consulting": {
+      "title": "Návrh a konzultácie",
+      "description": "Analyzujeme vaše potreby, navrhneme optimálne riešenie a spracujeme kompletnú projektovú dokumentáciu vrátane vybavenia povolení.",
+      "features": ["Analýza energetických potrieb", "Výber vhodného riešenia", "Projektová dokumentácia", "Vybavenie povolení"]
+    },
+    "delivery": {
+      "title": "Dodávka zariadení",
+      "description": "Dodávame overené AC a DC nabíjacie stanice od renomovaných výrobcov - MyBox pre domácnosti a firmy, Alpitronic pre verejné nabíjanie.",
+      "features": ["AC stanice 3,7 - 22 kW", "DC stanice 50 - 400 kW", "Príslušenstvo a káble", "Certifikované produkty"]
+    },
+    "installation": {
+      "title": "Inštalácia a realizácia",
+      "description": "Profesionálna montáž certifikovanými technikmi. Kompletná elektroinštalácia vrátane úprav rozvádzačov a uvedenia do prevádzky.",
+      "features": ["Certifikovaní technici", "Kompletná elektroinštalácia", "Uvedenie do prevádzky", "Zaškolenie obsluhy"]
+    },
+    "service": {
+      "title": "Servis a údržba",
+      "description": "Pravidelná údržba, rýchle opravy a vzdialená diagnostika. Servisné zmluvy s garantovanou dobou odozvy.",
+      "features": ["Pravidelná údržba", "Rýchle opravy", "Vzdialená diagnostika", "SLA zmluvy"]
+    },
+    "integration": {
+      "title": "Integrácie a software",
+      "description": "Pripojenie k cloudovým platformám, integrácia s fotovoltaikou, dynamický load management a fakturačné systémy.",
+      "features": ["Cloud management", "Integrácia s FVE", "Load management", "Fakturačné systémy"]
+    },
+    "support": {
+      "title": "Technická podpora",
+      "description": "Hotline pre riešenie problémov, školenia pre obsluhu a pravidelný reporting o využívaní nabíjacej infraštruktúry.",
+      "features": ["Hotline podpora", "Školenia", "Reporting", "Konzultácie"]
+    },
+    "cta": {
+      "title": "Potrebujete poradiť?",
+      "description": "Kontaktujte nás pre nezáväznú konzultáciu",
+      "button": "Kontaktovať"
+    }
+  },
+  "products": {
+    "title": "Nabíjacie stanice",
+    "subtitle": "Široké portfólio pre každú potrebu",
+    "description": "Od domácich wallboxov až po výkonné DC rýchlonabíjačky",
+    "mybox": {
+      "title": "MyBox",
+      "subtitle": "Česká kvalita pre elektromobilitu",
+      "description": "Značka nabíjacích staníc skupiny ELEXIM. Všetky produkty sú navrhnuté a vyrábané v Českej republike s dôrazom na kvalitu, bezpečnosť a moderný dizajn.",
+      "features": {
+        "czech": {
+          "title": "Česká výroba",
+          "description": "Vyvíjané a vyrábané v ČR od roku 2017"
+        },
+        "smart": {
+          "title": "Smart riešenia",
+          "description": "Cloudová správa a mobilná aplikácia"
+        },
+        "design": {
+          "title": "Prémiový dizajn",
+          "description": "Minimalistická estetika s kaleným sklom"
+        },
+        "trusted": {
+          "title": "Overené značkami",
+          "description": "ČEZ, ŠKODA AUTO, PRE, Volvo a ďalší"
+        }
+      },
+      "stats": {
+        "since": "Od roku",
+        "installations": "Inštalácií",
+        "countries": "Krajiny"
+      }
+    },
+    "ac": {
+      "title": "AC nabíjacie stanice",
+      "subtitle": "Striedavé nabíjanie do 22 kW",
+      "description": "Ideálne pre domácnosti, bytové domy a firemné parkoviská. Nabíjanie cez noc alebo počas pracovnej doby."
+    },
+    "dc": {
+      "title": "DC rýchlonabíjačky",
+      "subtitle": "Jednosmerné nabíjanie 50-400 kW",
+      "description": "Pre verejné nabíjacie stanice, čerpacie stanice a diaľničné odpočívadlá. Nabíjanie za minúty."
+    },
+    "home": {
+      "name": "MyBox Home",
+      "power": "do 11 kW",
+      "description": "Kompaktný wallbox pre domáce nabíjanie",
+      "features": ["Jednofázové/trojfázové", "Integrovaný kábel", "LED indikácia", "Aplikácia MyBox"]
+    },
+    "plus": {
+      "name": "MyBox Plus",
+      "power": "do 22 kW",
+      "description": "Výkonný wallbox pre náročnejšie použitie",
+      "features": ["Trojfázové nabíjanie", "RFID autorizácia", "Ethernet/WiFi", "OCPP 1.6"]
+    },
+    "profi": {
+      "name": "MyBox Profi",
+      "power": "2x 22 kW",
+      "description": "Dvojitá stanica pre parkoviská",
+      "features": ["Dva nabíjacie body", "MID elektromer", "Dynamický load management", "Backend ready"]
+    },
+    "post": {
+      "name": "MyBox Post",
+      "power": "2x 22 kW",
+      "description": "Stĺpová stanica pre verejné priestory",
+      "features": ["Robustná konštrukcia", "Antivandal prevedenie", "Osvetlenie", "Platobný terminál"]
+    },
+    "hyc50": {
+      "name": "Alpitronic HYC 50",
+      "power": "50 kW",
+      "description": "Kompaktná DC rýchlonabíjačka",
+      "features": ["CCS + CHAdeMO", "Kompaktné rozmery", "Vzdialená správa", "Plug & Charge"]
+    },
+    "hyc200": {
+      "name": "Alpitronic HYC 200",
+      "power": "200 kW",
+      "description": "Výkonná DC stanica",
+      "features": ["Až 2 vozidlá súčasne", "Dynamické rozdelenie výkonu", "Dotykový displej", "Platobný terminál"]
+    },
+    "hyc400": {
+      "name": "Alpitronic HYC 400",
+      "power": "400 kW",
+      "description": "Ultra-rýchle nabíjanie",
+      "features": ["Až 4 vozidlá súčasne", "Maximálny výkon", "Prémiový dizajn", "Kompletná konektivita"]
+    },
+    "cta": {
+      "title": "Neviete si vybrať?",
+      "description": "Pomôžeme vám nájsť ideálne riešenie",
+      "button": "Konzultácia zdarma"
+    },
+    "viewAll": "Zobraziť všetky produkty",
+    "getQuote": "Získať ponuku",
+    "learnMore": "Zistiť viac"
+  },
+  "whyUs": {
+    "title": "Prečo ELEXIM?",
+    "subtitle": "Skúsenosti, odbornosť a spoľahlivosť",
+    "experience": {
+      "title": "25+ rokov skúseností",
+      "description": "Skupina ELEXIM pôsobí na trhu od roku 1999"
+    },
+    "expert": {
+      "title": "Certifikovaní odborníci",
+      "description": "Tím skúsených technikov a projektantov"
+    },
+    "complete": {
+      "title": "Kompletný servis",
+      "description": "Od návrhu až po servis - všetko z jedného miesta"
+    },
+    "quality": {
+      "title": "Kvalitné produkty",
+      "description": "Dodávame overené značky s certifikáciami"
+    }
+  },
+  "about": {
+    "title": "O spoločnosti",
+    "subtitle": "Súčasť medzinárodnej skupiny ELEXIM",
+    "description": "ELEXIM SK s.r.o. je slovenská pobočka českej spoločnosti ELEXIM a.s., ktorá pôsobí na trhu od roku 1999. Špecializujeme sa na komplexné riešenia v oblasti elektromobility.",
+    "group": {
+      "title": "Skupina ELEXIM",
+      "description": "Materská spoločnosť ELEXIM a.s. so sídlom v Kroměříži má tri hlavné divízie - Elektromobilita, Špeciálne aplikácie a Elektrotechnika. Pôsobíme v 5 krajinách."
+    },
+    "stats": {
+      "years": "rokov skúseností",
+      "projects": "realizovaných projektov",
+      "countries": "krajín pôsobnosti",
+      "employees": "zamestnancov"
+    }
+  },
+  "contact": {
+    "title": "Kontaktujte nás",
+    "subtitle": "Radi vám pomôžeme s návrhom nabíjacej infraštruktúry",
+    "description": "Vyplňte formulár alebo nás kontaktujte priamo. Odpovieme do 24 hodín.",
+    "form": {
+      "name": "Meno a priezvisko",
+      "email": "E-mail",
+      "phone": "Telefón",
+      "company": "Spoločnosť",
+      "customerType": "Typ zákazníka",
+      "customerTypes": {
+        "individual": "Domácnosť",
+        "company": "Firma",
+        "public": "Verejný sektor"
+      },
+      "subject": "Predmet záujmu",
+      "subjects": {
+        "consulting": "Konzultácia a návrh",
+        "delivery": "Dodávka nabíjacej stanice",
+        "installation": "Inštalácia",
+        "service": "Servis a údržba",
+        "other": "Iné"
+      },
+      "message": "Správa",
+      "gdpr": "Súhlasím so spracovaním osobných údajov",
+      "submit": "Odoslať správu",
+      "success": "Správa bola úspešne odoslaná!",
+      "error": "Nastala chyba, skúste to prosím znova."
+    },
+    "info": {
+      "title": "Kontaktné údaje",
+      "address": "Adresa",
+      "addressValue": "Dunajská 8, 811 08 Bratislava",
+      "phone": "Telefón",
+      "email": "E-mail",
+      "ico": "IČO",
+      "dic": "DIČ",
+      "hours": "Pracovná doba",
+      "hoursValue": "Po - Pia: 8:00 - 16:30"
+    }
+  },
+  "footer": {
+    "description": "Komplexné riešenia pre elektromobilitu na Slovensku. Súčasť medzinárodnej skupiny ELEXIM.",
+    "quickLinks": "Rýchle odkazy",
+    "contactInfo": "Kontaktné údaje",
+    "copyright": "Všetky práva vyhradené."
+  },
+  "cta": {
+    "title": "Pripravený na elektromobilitu?",
+    "subtitle": "Kontaktujte nás pre nezáväznú konzultáciu a cenovú ponuku",
+    "button": "Získať ponuku"
+  },
+  "common": {
+    "learnMore": "Zistiť viac",
+    "getQuote": "Získať ponuku",
+    "backToHome": "Späť na domov",
+    "readMore": "Čítať viac",
+    "viewAll": "Zobraziť všetko"
+  }
+}

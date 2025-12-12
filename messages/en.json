@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "title": "ELEXIM SK | EV Charging Infrastructure",
+    "description": "Complete e-mobility solutions in Slovakia - design, supply, installation and maintenance of EV charging stations."
+  },
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "products": "Products",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "hero": {
+    "line1": "Charging Infrastructure",
+    "line2": "for the Future",
+    "subtitle": "We supply and install EV charging stations. From home wallboxes to public DC fast chargers - complete turnkey solutions.",
+    "cta": "Get a Quote",
+    "ctaSecondary": "Our Products",
+    "scroll": "Learn more",
+    "stats": {
+      "years": "years of experience",
+      "projects": "installations",
+      "countries": "countries"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive care for your charging infrastructure",
+    "description": "From initial consultation to long-term service - we take care of everything",
+    "consulting": {
+      "title": "Design & Consulting",
+      "description": "We analyze your needs, design optimal solutions and prepare complete project documentation including permits.",
+      "features": ["Energy needs analysis", "Solution selection", "Project documentation", "Permit handling"]
+    },
+    "delivery": {
+      "title": "Equipment Supply",
+      "description": "We supply proven AC and DC charging stations from renowned manufacturers - MyBox for homes and businesses, Alpitronic for public charging.",
+      "features": ["AC stations 3.7 - 22 kW", "DC stations 50 - 400 kW", "Accessories and cables", "Certified products"]
+    },
+    "installation": {
+      "title": "Installation",
+      "description": "Professional installation by certified technicians. Complete electrical work including panel modifications and commissioning.",
+      "features": ["Certified technicians", "Complete electrical work", "Commissioning", "Operator training"]
+    },
+    "service": {
+      "title": "Service & Maintenance",
+      "description": "Regular maintenance, fast repairs and remote diagnostics. Service contracts with guaranteed response times.",
+      "features": ["Regular maintenance", "Fast repairs", "Remote diagnostics", "SLA contracts"]
+    },
+    "integration": {
+      "title": "Integration & Software",
+      "description": "Cloud platform connectivity, PV integration, dynamic load management and billing systems.",
+      "features": ["Cloud management", "PV integration", "Load management", "Billing systems"]
+    },
+    "support": {
+      "title": "Technical Support",
+      "description": "Hotline for problem resolution, operator training and regular reporting on charging infrastructure usage.",
+      "features": ["Hotline support", "Training", "Reporting", "Consulting"]
+    },
+    "cta": {
+      "title": "Need advice?",
+      "description": "Contact us for a free consultation",
+      "button": "Contact Us"
+    }
+  },
+  "products": {
+    "title": "Charging Stations",
+    "subtitle": "Wide portfolio for every need",
+    "description": "From home wallboxes to powerful DC fast chargers",
+    "mybox": {
+      "title": "MyBox",
+      "subtitle": "Czech quality for e-mobility",
+      "description": "The charging station brand of the ELEXIM Group. All products are designed and manufactured in the Czech Republic with focus on quality, safety and modern design.",
+      "features": {
+        "czech": {
+          "title": "Czech Made",
+          "description": "Developed and manufactured in CZ since 2017"
+        },
+        "smart": {
+          "title": "Smart Solutions",
+          "description": "Cloud management and mobile app"
+        },
+        "design": {
+          "title": "Premium Design",
+          "description": "Minimalist aesthetics with tempered glass"
+        },
+        "trusted": {
+          "title": "Trusted by Brands",
+          "description": "ČEZ, ŠKODA AUTO, PRE, Volvo and more"
+        }
+      },
+      "stats": {
+        "since": "Since",
+        "installations": "Installations",
+        "countries": "Countries"
+      }
+    },
+    "ac": {
+      "title": "AC Charging Stations",
+      "subtitle": "AC charging up to 22 kW",
+      "description": "Ideal for homes, apartment buildings and company parking lots. Overnight or workday charging."
+    },
+    "dc": {
+      "title": "DC Fast Chargers",
+      "subtitle": "DC charging 50-400 kW",
+      "description": "For public charging stations, gas stations and highway rest areas. Charging in minutes."
+    },
+    "home": {
+      "name": "MyBox Home",
+      "power": "up to 11 kW",
+      "description": "Compact wallbox for home charging",
+      "features": ["Single/three phase", "Integrated cable", "LED indication", "MyBox App"]
+    },
+    "plus": {
+      "name": "MyBox Plus",
+      "power": "up to 22 kW",
+      "description": "Powerful wallbox for demanding use",
+      "features": ["Three-phase charging", "RFID authorization", "Ethernet/WiFi", "OCPP 1.6"]
+    },
+    "profi": {
+      "name": "MyBox Profi",
+      "power": "2x 22 kW",
+      "description": "Dual station for parking lots",
+      "features": ["Two charging points", "MID meter", "Dynamic load management", "Backend ready"]
+    },
+    "post": {
+      "name": "MyBox Post",
+      "power": "2x 22 kW",
+      "description": "Pedestal station for public areas",
+      "features": ["Robust construction", "Anti-vandal design", "Lighting", "Payment terminal"]
+    },
+    "hyc50": {
+      "name": "Alpitronic HYC 50",
+      "power": "50 kW",
+      "description": "Compact DC fast charger",
+      "features": ["CCS + CHAdeMO", "Compact dimensions", "Remote management", "Plug & Charge"]
+    },
+    "hyc200": {
+      "name": "Alpitronic HYC 200",
+      "power": "200 kW",
+      "description": "Powerful DC station",
+      "features": ["Up to 2 vehicles simultaneously", "Dynamic power sharing", "Touch display", "Payment terminal"]
+    },
+    "hyc400": {
+      "name": "Alpitronic HYC 400",
+      "power": "400 kW",
+      "description": "Ultra-fast charging",
+      "features": ["Up to 4 vehicles simultaneously", "Maximum power", "Premium design", "Full connectivity"]
+    },
+    "cta": {
+      "title": "Not sure which to choose?",
+      "description": "We'll help you find the ideal solution",
+      "button": "Free Consultation"
+    },
+    "viewAll": "View All Products",
+    "getQuote": "Get a Quote",
+    "learnMore": "Learn more"
+  },
+  "whyUs": {
+    "title": "Why ELEXIM?",
+    "subtitle": "Experience, expertise and reliability",
+    "experience": {
+      "title": "25+ Years of Experience",
+      "description": "ELEXIM Group has been in the market since 1999"
+    },
+    "expert": {
+      "title": "Certified Experts",
+      "description": "Team of experienced technicians and engineers"
+    },
+    "complete": {
+      "title": "Complete Service",
+      "description": "From design to service - all from one place"
+    },
+    "quality": {
+      "title": "Quality Products",
+      "description": "We supply certified brands"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Part of the international ELEXIM Group",
+    "description": "ELEXIM SK s.r.o. is the Slovak branch of the Czech company ELEXIM a.s., which has been in the market since 1999. We specialize in comprehensive e-mobility solutions.",
+    "group": {
+      "title": "ELEXIM Group",
+      "description": "The parent company ELEXIM a.s. based in Kroměříž has three main divisions - E-mobility, Special Applications and Electrical Engineering. We operate in 5 countries."
+    },
+    "stats": {
+      "years": "years of experience",
+      "projects": "completed projects",
+      "countries": "countries of operation",
+      "employees": "employees"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We'll be happy to help you design your charging infrastructure",
+    "description": "Fill out the form or contact us directly. We'll respond within 24 hours.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "customerType": "Customer Type",
+      "customerTypes": {
+        "individual": "Residential",
+        "company": "Business",
+        "public": "Public Sector"
+      },
+      "subject": "Subject of Interest",
+      "subjects": {
+        "consulting": "Consulting & Design",
+        "delivery": "Charging Station Supply",
+        "installation": "Installation",
+        "service": "Service & Maintenance",
+        "other": "Other"
+      },
+      "message": "Message",
+      "gdpr": "I agree to the processing of personal data",
+      "submit": "Send Message",
+      "success": "Message sent successfully!",
+      "error": "An error occurred, please try again."
+    },
+    "info": {
+      "title": "Contact Details",
+      "address": "Address",
+      "addressValue": "Dunajská 8, 811 08 Bratislava, Slovakia",
+      "phone": "Phone",
+      "email": "Email",
+      "ico": "Company ID",
+      "dic": "Tax ID",
+      "hours": "Business Hours",
+      "hoursValue": "Mon - Fri: 8:00 AM - 4:30 PM"
+    }
+  },
+  "footer": {
+    "description": "Complete e-mobility solutions in Slovakia. Part of the international ELEXIM Group.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "copyright": "All rights reserved."
+  },
+  "cta": {
+    "title": "Ready for E-mobility?",
+    "subtitle": "Contact us for a free consultation and quote",
+    "button": "Get a Quote"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "getQuote": "Get a Quote",
+    "backToHome": "Back to Home",
+    "readMore": "Read More",
+    "viewAll": "View All"
+  }
+}
