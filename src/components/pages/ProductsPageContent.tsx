@@ -24,13 +24,13 @@ export default function ProductsPageContent() {
   const t = useTranslations("products");
 
   const scrollToContent = () => {
-    window.scrollTo({ top: window.innerHeight * 0.7 - 80, behavior: "smooth" });
+    window.scrollTo({ top: window.innerHeight - 80, behavior: "smooth" });
   };
 
   return (
     <>
       {/* Hero Section with Video */}
-      <section className="relative h-[75vh] min-h-[550px] flex items-center overflow-hidden">
+      <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <video
