@@ -130,26 +130,37 @@ export default function WhyUs() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 + i * 0.1, duration: 0.5 }}
-                  className={`p-6 rounded-2xl ${
+                  className={`relative p-6 rounded-2xl overflow-hidden ${
                     stat.accent
                       ? "bg-primary-600 text-white"
                       : "bg-white border border-secondary-200"
                   }`}
                 >
-                  <div className={`text-4xl lg:text-5xl font-bold font-[family-name:var(--font-inter)] mb-2 ${
-                    stat.accent ? "text-white" : "text-secondary-900"
-                  }`}>
-                    <CountUp
-                      end={stat.value}
-                      suffix={stat.suffix}
-                      isInView={isInView}
-                      duration={stat.value > 100 ? 2000 : 1500}
-                    />
+                  {/* Grid pattern overlay */}
+                  <div className={`absolute inset-0 ${stat.accent ? "opacity-[0.08]" : "opacity-[0.03]"}`}>
+                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                      <pattern id={`stat-grid-${i}`} width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke={stat.accent ? "white" : "#1e293b"} strokeWidth="0.5" />
+                      </pattern>
+                      <rect width="100%" height="100%" fill={`url(#stat-grid-${i})`} />
+                    </svg>
                   </div>
-                  <div className={`text-sm ${
-                    stat.accent ? "text-white/80" : "text-secondary-600"
-                  }`}>
-                    {t(stat.labelKey)}
+                  <div className="relative">
+                    <div className={`text-4xl lg:text-5xl font-bold font-[family-name:var(--font-inter)] mb-2 ${
+                      stat.accent ? "text-white" : "text-secondary-900"
+                    }`}>
+                      <CountUp
+                        end={stat.value}
+                        suffix={stat.suffix}
+                        isInView={isInView}
+                        duration={stat.value > 100 ? 2000 : 1500}
+                      />
+                    </div>
+                    <div className={`text-sm ${
+                      stat.accent ? "text-white/80" : "text-secondary-600"
+                    }`}>
+                      {t(stat.labelKey)}
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -161,12 +172,21 @@ export default function WhyUs() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6, duration: 0.4 }}
-              className="mt-6 p-5 bg-white rounded-2xl border border-secondary-200 flex items-center gap-4"
+              className="relative mt-6 p-5 bg-white rounded-2xl border border-secondary-200 flex items-center gap-4 overflow-hidden"
             >
-              <div className="w-14 h-14 bg-secondary-900 rounded-xl flex items-center justify-center flex-shrink-0">
+              {/* Grid pattern overlay */}
+              <div className="absolute inset-0 opacity-[0.03]">
+                <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <pattern id="iso-grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#1e293b" strokeWidth="0.5" />
+                  </pattern>
+                  <rect width="100%" height="100%" fill="url(#iso-grid)" />
+                </svg>
+              </div>
+              <div className="relative w-14 h-14 bg-secondary-900 rounded-xl flex items-center justify-center flex-shrink-0">
                 <span className="text-white font-bold text-xs">ISO</span>
               </div>
-              <div>
+              <div className="relative">
                 <div className="font-semibold text-secondary-900">{t("iso.title")}</div>
                 <div className="text-sm text-secondary-600">{t("iso.description")}</div>
               </div>

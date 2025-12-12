@@ -27,6 +27,58 @@
     "title": "Our Services",
     "subtitle": "Comprehensive care for your charging infrastructure",
     "description": "From initial consultation to long-term service - we take care of everything",
+    "hero": {
+      "titlePart1": "Complete Solutions",
+      "titlePart2": "for E-mobility",
+      "subtitle": "From initial consultation, through design and installation, to long-term service and support. We take care of your charging infrastructure from A to Z."
+    },
+    "journey": {
+      "badge": "Your Path to E-mobility",
+      "title": "We guide you through the entire process",
+      "subtitle": "Click on individual steps to discover how we help you on your journey to e-mobility.",
+      "stepOf": "Step {current} of {total}"
+    },
+    "showcase": {
+      "badge": "What we can do for you",
+      "title": "Tailored Services",
+      "subtitle": "Every project is unique. That's why we offer flexible solutions that adapt to your needs.",
+      "learnMore": "Learn more",
+      "viewAll": "View all services"
+    },
+    "process": {
+      "title": "How It Works",
+      "subtitle": "Simple and clear process from first contact to handover of a functional charging station.",
+      "steps": {
+        "contact": {
+          "title": "First Contact",
+          "description": "Reach out to us and tell us about your needs."
+        },
+        "analysis": {
+          "title": "Analysis",
+          "description": "We map your requirements and technical possibilities."
+        },
+        "design": {
+          "title": "Solution Design",
+          "description": "We prepare an optimal design and price quote."
+        },
+        "deliveryStep": {
+          "title": "Delivery",
+          "description": "We ensure delivery of all necessary components."
+        },
+        "installationStep": {
+          "title": "Installation",
+          "description": "Professional installation by certified technicians."
+        },
+        "handover": {
+          "title": "Handover",
+          "description": "Commissioning and operator training."
+        }
+      },
+      "cta": {
+        "title": "On average within 14 days",
+        "subtitle": "From contract signing to functional charging station"
+      }
+    },
     "consulting": {
       "title": "Design & Consulting",
       "description": "We analyze your needs, design optimal solutions and prepare complete project documentation including permits.",

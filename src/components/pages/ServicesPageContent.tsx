@@ -14,7 +14,20 @@ import {
   ArrowRight,
   Check,
   ChevronDown,
+  MessageSquare,
+  FileSearch,
+  PenTool,
+  CheckCircle2,
 } from "lucide-react";
+
+const processSteps = [
+  { key: "contact", icon: MessageSquare },
+  { key: "analysis", icon: FileSearch },
+  { key: "design", icon: PenTool },
+  { key: "deliveryStep", icon: Truck },
+  { key: "installationStep", icon: Wrench },
+  { key: "handover", icon: CheckCircle2 },
+];
 
 const services = [
   { key: "consulting", icon: Lightbulb, image: "/mybox-profi_office-cam-2_3k_final.jpg" },
@@ -115,6 +128,120 @@ export default function ServicesPageContent() {
             <ChevronDown size={24} />
           </motion.div>
         </motion.button>
+      </section>
+
+      {/* Process Section - "Ako to funguje" */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <div className="h-1 w-16 bg-primary-500 mx-auto mb-6" />
+            <h2 className="font-[family-name:var(--font-inter)] text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-600 mb-5">
+              {t("process.title")}
+            </h2>
+            <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
+              {t("process.subtitle")}
+            </p>
+          </motion.div>
+
+          {/* Timeline - Desktop */}
+          <div className="hidden lg:block relative">
+            <div className="absolute top-8 left-0 right-0 h-px bg-secondary-200" />
+            <div className="grid grid-cols-6 gap-4">
+              {processSteps.map((step, index) => {
+                const Icon = step.icon;
+                return (
+                  <motion.div
+                    key={step.key}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="relative text-center"
+                  >
+                    <div className="relative z-10 w-16 h-16 mx-auto mb-6 rounded-2xl bg-white border-2 border-primary-200 flex items-center justify-center shadow-sm hover:border-primary-500 hover:shadow-md transition-all duration-300">
+                      <Icon size={24} className="text-primary-600" />
+                      <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-primary-600 text-white text-xs font-bold flex items-center justify-center">
+                        {index + 1}
+                      </span>
+                    </div>
+                    <h4 className="font-semibold text-secondary-900 mb-2">
+                      {t(`process.steps.${step.key}.title`)}
+                    </h4>
+                    <p className="text-sm text-secondary-500 leading-relaxed">
+                      {t(`process.steps.${step.key}.description`)}
+                    </p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Timeline - Mobile */}
+          <div className="lg:hidden space-y-6">
+            {processSteps.map((step, index) => {
+              const Icon = step.icon;
+              const isLast = index === processSteps.length - 1;
+              return (
+                <motion.div
+                  key={step.key}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="relative flex gap-4"
+                >
+                  <div className="flex flex-col items-center">
+                    <div className="w-12 h-12 rounded-xl bg-white border-2 border-primary-200 flex items-center justify-center shadow-sm">
+                      <Icon size={20} className="text-primary-600" />
+                    </div>
+                    {!isLast && <div className="w-px flex-1 bg-primary-200 my-2" />}
+                  </div>
+                  <div className={`flex-1 ${isLast ? "" : "pb-6"}`}>
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-xs font-bold text-primary-600">{String(index + 1).padStart(2, "0")}</span>
+                      <h4 className="font-semibold text-secondary-900">{t(`process.steps.${step.key}.title`)}</h4>
+                    </div>
+                    <p className="text-sm text-secondary-600">{t(`process.steps.${step.key}.description`)}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* CTA Box */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16"
+          >
+            <div className="bg-secondary-50 rounded-2xl p-8 lg:p-10 border border-secondary-100 flex flex-col lg:flex-row items-center justify-between gap-6">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-xl bg-primary-600 flex items-center justify-center">
+                  <CheckCircle2 size={28} className="text-white" />
+                </div>
+                <div>
+                  <p className="text-xl font-bold text-secondary-900">{t("process.cta.title")}</p>
+                  <p className="text-secondary-600">{t("process.cta.subtitle")}</p>
+                </div>
+              </div>
+              <Link
+                href="/kontakt"
+                className="group inline-flex items-center gap-3 px-6 py-3 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transition-all duration-300"
+              >
+                {t("cta.button")}
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {/* Services Grid */}

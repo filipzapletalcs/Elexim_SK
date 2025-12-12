@@ -27,6 +27,58 @@
     "title": "Naše služby",
     "subtitle": "Komplexní péče o vaši nabíjecí infrastrukturu",
     "description": "Od prvotní konzultace až po dlouhodobý servis - postaráme se o vše",
+    "hero": {
+      "titlePart1": "Kompletní řešení",
+      "titlePart2": "pro elektromobilitu",
+      "subtitle": "Od prvotní konzultace, přes návrh a instalaci, až po dlouhodobý servis a podporu. Postaráme se o vaši nabíjecí infrastrukturu od A do Z."
+    },
+    "journey": {
+      "badge": "Vaše cesta k elektromobilitě",
+      "title": "Provázíme vás celým procesem",
+      "subtitle": "Klikněte na jednotlivé kroky a zjistěte, jak vám pomůžeme na vaší cestě k elektromobilitě.",
+      "stepOf": "Krok {current} z {total}"
+    },
+    "showcase": {
+      "badge": "Co pro vás můžeme udělat",
+      "title": "Služby šité na míru",
+      "subtitle": "Každý projekt je jedinečný. Proto nabízíme flexibilní řešení, která se přizpůsobí vašim potřebám.",
+      "learnMore": "Zjistit více",
+      "viewAll": "Zobrazit všechny služby"
+    },
+    "process": {
+      "title": "Jak to funguje",
+      "subtitle": "Jednoduchý a přehledný proces od prvního kontaktu až po předání funkční nabíjecí stanice.",
+      "steps": {
+        "contact": {
+          "title": "První kontakt",
+          "description": "Ozvěte se nám a řekněte nám o vašich potřebách."
+        },
+        "analysis": {
+          "title": "Analýza",
+          "description": "Zmapujeme vaše požadavky a technické možnosti."
+        },
+        "design": {
+          "title": "Návrh řešení",
+          "description": "Připravíme optimální návrh a cenovou nabídku."
+        },
+        "deliveryStep": {
+          "title": "Dodávka",
+          "description": "Zajistíme dodání všech potřebných komponentů."
+        },
+        "installationStep": {
+          "title": "Instalace",
+          "description": "Profesionální montáž certifikovanými techniky."
+        },
+        "handover": {
+          "title": "Předání",
+          "description": "Uvedení do provozu a zaškolení obsluhy."
+        }
+      },
+      "cta": {
+        "title": "Průměrně do 14 dnů",
+        "subtitle": "Od podpisu smlouvy po funkční nabíjecí stanici"
+      }
+    },
     "consulting": {
       "title": "Návrh a konzultace",
       "description": "Analyzujeme vaše potřeby, navrhneme optimální řešení a zpracujeme kompletní projektovou dokumentaci včetně vyřízení povolení.",

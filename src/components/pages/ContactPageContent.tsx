@@ -40,7 +40,7 @@ export default function ContactPageContent() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <div className="h-1 w-20 bg-gradient-to-r from-primary-500 to-accent-400 mb-8" />
+            <div className="h-1 w-20 bg-white mb-8" />
             <h1 className="font-[family-name:var(--font-inter)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               {t("title")}
             </h1>
@@ -52,25 +52,26 @@ export default function ContactPageContent() {
       </section>
 
       {/* Contact Content */}
-      <section className="py-20 lg:py-32 bg-background">
+      <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-5 gap-16">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
             {/* Contact Info */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-2 space-y-8"
+              transition={{ duration: 0.6 }}
+              className="flex"
             >
-              <div>
-                <h2 className="font-[family-name:var(--font-inter)] text-2xl font-bold text-primary-600 mb-6">
+              <div className="bg-secondary-50 rounded-2xl p-8 lg:p-10 flex flex-col w-full">
+                <h2 className="font-[family-name:var(--font-inter)] text-2xl font-bold text-secondary-900 mb-8">
                   {t("info.title")}
                 </h2>
 
                 <div className="space-y-6">
                   <div className="flex gap-4">
-                    <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <MapPin size={22} className="text-primary-600" />
+                    <div className="w-12 h-12 bg-primary-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <MapPin size={20} className="text-white" />
                     </div>
                     <div>
                       <div className="text-sm text-secondary-500 mb-1">{t("info.address")}</div>
@@ -79,20 +80,20 @@ export default function ContactPageContent() {
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Phone size={22} className="text-primary-600" />
+                    <div className="w-12 h-12 bg-primary-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Phone size={20} className="text-white" />
                     </div>
                     <div>
                       <div className="text-sm text-secondary-500 mb-1">{t("info.phone")}</div>
-                      <a href="tel:+421000000000" className="text-secondary-900 font-medium hover:text-primary-600 transition-colors">
-                        +421 000 000 000
+                      <a href="tel:+420573335009" className="text-secondary-900 font-medium hover:text-primary-600 transition-colors">
+                        +420 573 335 009
                       </a>
                     </div>
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Mail size={22} className="text-primary-600" />
+                    <div className="w-12 h-12 bg-primary-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Mail size={20} className="text-white" />
                     </div>
                     <div>
                       <div className="text-sm text-secondary-500 mb-1">{t("info.email")}</div>
@@ -103,8 +104,8 @@ export default function ContactPageContent() {
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Clock size={22} className="text-primary-600" />
+                    <div className="w-12 h-12 bg-primary-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Clock size={20} className="text-white" />
                     </div>
                     <div>
                       <div className="text-sm text-secondary-500 mb-1">{t("info.hours")}</div>
@@ -112,64 +113,52 @@ export default function ContactPageContent() {
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Company Details Card */}
-              <div className="p-6 bg-secondary-50 rounded-2xl">
-                <h3 className="font-semibold text-secondary-900 mb-4">ELEXIM SK, s.r.o.</h3>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <div className="text-secondary-500">{t("info.ico")}</div>
-                    <div className="text-secondary-900 font-medium">51 818 612</div>
-                  </div>
-                  <div>
-                    <div className="text-secondary-500">{t("info.dic")}</div>
-                    <div className="text-secondary-900 font-medium">SK2120801155</div>
+                {/* Company Details */}
+                <div className="mt-auto pt-8 border-t border-secondary-200">
+                  <h3 className="font-semibold text-secondary-900 mb-4">ELEXIM SK, s.r.o.</h3>
+                  <div className="grid grid-cols-2 gap-6 text-sm">
+                    <div>
+                      <div className="text-secondary-500 mb-1">{t("info.ico")}</div>
+                      <div className="text-secondary-900 font-medium">51 818 612</div>
+                    </div>
+                    <div>
+                      <div className="text-secondary-500 mb-1">{t("info.dic")}</div>
+                      <div className="text-secondary-900 font-medium">SK2120801155</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Map */}
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.8393!2d17.1077!3d48.1486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c89360aca6197%3A0x631f9b82fd884368!2sDunajsk%C3%A1%208%2C%20811%2008%20Star%C3%A9%20Mesto%2C%20Slovakia!5e0!3m2!1sen!2sus!4v1"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
               </div>
             </motion.div>
 
             {/* Contact Form */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-3"
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="flex"
             >
-              <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl border border-secondary-100">
+              <div className="bg-secondary-50 rounded-2xl p-8 lg:p-10 flex flex-col w-full">
                 {isSubmitted ? (
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="text-center py-16"
+                    className="text-center py-12"
                   >
-                    <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <CheckCircle size={40} className="text-emerald-600" />
+                    <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-5">
+                      <CheckCircle size={32} className="text-primary-600" />
                     </div>
-                    <h3 className="text-2xl font-bold text-secondary-900 mb-3">
+                    <h3 className="text-xl font-bold text-secondary-900 mb-2">
                       {t("form.success")}
                     </h3>
-                    <p className="text-secondary-600">
+                    <p className="text-secondary-600 text-sm">
                       Ozveme sa vám čo najskôr.
                     </p>
                   </motion.div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid sm:grid-cols-2 gap-6">
+                  <form onSubmit={handleSubmit} className="space-y-5">
+                    <div className="grid sm:grid-cols-2 gap-5">
                       <div>
                         <label className="block text-sm font-medium text-secondary-700 mb-2">
                           {t("form.name")} *
@@ -177,7 +166,7 @@ export default function ContactPageContent() {
                         <input
                           type="text"
                           required
-                          className="w-full px-4 py-3.5 rounded-xl border border-secondary-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-secondary-200 bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
                         />
                       </div>
                       <div>
@@ -187,19 +176,19 @@ export default function ContactPageContent() {
                         <input
                           type="email"
                           required
-                          className="w-full px-4 py-3.5 rounded-xl border border-secondary-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-secondary-200 bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
                         />
                       </div>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="grid sm:grid-cols-2 gap-5">
                       <div>
                         <label className="block text-sm font-medium text-secondary-700 mb-2">
                           {t("form.phone")}
                         </label>
                         <input
                           type="tel"
-                          className="w-full px-4 py-3.5 rounded-xl border border-secondary-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-secondary-200 bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
                         />
                       </div>
                       <div>
@@ -208,17 +197,17 @@ export default function ContactPageContent() {
                         </label>
                         <input
                           type="text"
-                          className="w-full px-4 py-3.5 rounded-xl border border-secondary-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-secondary-200 bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
                         />
                       </div>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="grid sm:grid-cols-2 gap-5">
                       <div>
                         <label className="block text-sm font-medium text-secondary-700 mb-2">
                           {t("form.customerType")}
                         </label>
-                        <select className="w-full px-4 py-3.5 rounded-xl border border-secondary-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all bg-white">
+                        <select className="w-full px-4 py-3 rounded-xl border border-secondary-200 bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all">
                           <option value="individual">{t("form.customerTypes.individual")}</option>
                           <option value="company">{t("form.customerTypes.company")}</option>
                           <option value="public">{t("form.customerTypes.public")}</option>
@@ -228,7 +217,7 @@ export default function ContactPageContent() {
                         <label className="block text-sm font-medium text-secondary-700 mb-2">
                           {t("form.subject")}
                         </label>
-                        <select className="w-full px-4 py-3.5 rounded-xl border border-secondary-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all bg-white">
+                        <select className="w-full px-4 py-3 rounded-xl border border-secondary-200 bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all">
                           <option value="consulting">{t("form.subjects.consulting")}</option>
                           <option value="delivery">{t("form.subjects.delivery")}</option>
                           <option value="installation">{t("form.subjects.installation")}</option>
@@ -244,8 +233,8 @@ export default function ContactPageContent() {
                       </label>
                       <textarea
                         required
-                        rows={6}
-                        className="w-full px-4 py-3.5 rounded-xl border border-secondary-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all resize-none"
+                        rows={5}
+                        className="w-full px-4 py-3 rounded-xl border border-secondary-200 bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all resize-none"
                       />
                     </div>
 
@@ -254,7 +243,7 @@ export default function ContactPageContent() {
                         type="checkbox"
                         required
                         id="gdpr"
-                        className="mt-1 w-5 h-5 rounded border-secondary-300 text-primary-600 focus:ring-primary-500"
+                        className="mt-1 w-4 h-4 rounded border-secondary-300 text-primary-600 focus:ring-primary-500"
                       />
                       <label htmlFor="gdpr" className="text-sm text-secondary-600">
                         {t("form.gdpr")} *
@@ -264,7 +253,7 @@ export default function ContactPageContent() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 px-6 bg-primary-600 hover:bg-primary-700 disabled:bg-primary-400 text-white font-semibold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-xl hover:shadow-primary-500/25"
+                      className="w-full py-4 px-6 bg-primary-600 hover:bg-primary-700 disabled:bg-primary-400 text-white font-semibold rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                     >
                       {isSubmitting ? (
                         <>
@@ -283,6 +272,27 @@ export default function ContactPageContent() {
               </div>
             </motion.div>
           </div>
+
+          {/* Map - Full Width Below */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-12"
+          >
+            <div className="aspect-[21/9] rounded-2xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.8393!2d17.1077!3d48.1486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c89360aca6197%3A0x631f9b82fd884368!2sDunajsk%C3%A1%208%2C%20811%2008%20Star%C3%A9%20Mesto%2C%20Slovakia!5e0!3m2!1sen!2sus!4v1"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </motion.div>
         </div>
       </section>
     </>
