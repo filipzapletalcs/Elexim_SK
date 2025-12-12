@@ -280,7 +280,7 @@ export default function ServicesPageContent() {
 
                   {/* Content */}
                   <div className={`${isEven ? "lg:order-2" : "lg:order-1"}`}>
-                    <div className="inline-flex p-3 rounded-2xl bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400 mb-6">
+                    <div className="inline-flex p-3 rounded-2xl bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-white mb-6">
                       <Icon size={28} />
                     </div>
                     <h2 className="font-[family-name:var(--font-inter)] text-3xl lg:text-4xl font-bold text-primary-600 dark:text-secondary-100 mb-4">
@@ -295,7 +295,7 @@ export default function ServicesPageContent() {
                       {(t.raw(`${service.key}.features`) as string[]).map((feature, i) => (
                         <li key={i} className="flex items-center gap-3">
                           <div className="w-5 h-5 rounded-full bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center">
-                            <Check size={12} className="text-primary-600 dark:text-primary-400" />
+                            <Check size={12} className="text-primary-600 dark:text-white" />
                           </div>
                           <span className="text-secondary-700 dark:text-secondary-300">{feature}</span>
                         </li>

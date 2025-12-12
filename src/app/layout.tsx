@@ -32,21 +32,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function() {
-              const theme = localStorage.getItem('theme');
-              const isDark = theme === 'dark' ||
-                (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
-              if (isDark) document.documentElement.classList.add('dark');
-            })();
-          `,
-        }}
-      />
-      {children}
-    </>
-  );
+  return children;
 }
