@@ -143,16 +143,16 @@ export default function ProductsPageContent() {
               >
                 <div className="grid grid-cols-3 gap-6">
                   <div className="text-center">
-                    <div className="text-2xl lg:text-3xl font-bold text-primary-600 dark:text-primary-400">2017</div>
-                    <div className="text-xs text-secondary-500 dark:text-secondary-400 mt-1">{t("mybox.stats.since")}</div>
+                    <div className="text-2xl lg:text-3xl font-bold text-primary-600 dark:text-white">2017</div>
+                    <div className="text-xs text-secondary-500 dark:text-secondary-300 mt-1">{t("mybox.stats.since")}</div>
                   </div>
                   <div className="text-center border-x border-secondary-100 dark:border-secondary-700 px-4">
-                    <div className="text-2xl lg:text-3xl font-bold text-primary-600 dark:text-primary-400">500+</div>
-                    <div className="text-xs text-secondary-500 dark:text-secondary-400 mt-1">{t("mybox.stats.installations")}</div>
+                    <div className="text-2xl lg:text-3xl font-bold text-primary-600 dark:text-white">500+</div>
+                    <div className="text-xs text-secondary-500 dark:text-secondary-300 mt-1">{t("mybox.stats.installations")}</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl lg:text-3xl font-bold text-primary-600 dark:text-primary-400">5</div>
-                    <div className="text-xs text-secondary-500 dark:text-secondary-400 mt-1">{t("mybox.stats.countries")}</div>
+                    <div className="text-2xl lg:text-3xl font-bold text-primary-600 dark:text-white">5</div>
+                    <div className="text-xs text-secondary-500 dark:text-secondary-300 mt-1">{t("mybox.stats.countries")}</div>
                   </div>
                 </div>
               </motion.div>
@@ -171,7 +171,7 @@ export default function ProductsPageContent() {
                   alt="MyBox"
                   width={200}
                   height={60}
-                  className="h-14 w-auto"
+                  className="h-14 w-auto dark:brightness-0 dark:invert"
                 />
               </div>
               <p className="text-lg text-secondary-600 dark:text-secondary-400 leading-relaxed mb-8">
@@ -192,7 +192,7 @@ export default function ProductsPageContent() {
                       key={feature.key}
                       className="flex items-start gap-4 p-4 rounded-xl bg-secondary-50/70 dark:bg-secondary-800/70 hover:bg-secondary-100/70 dark:hover:bg-secondary-700/70 transition-colors"
                     >
-                      <div className="p-2.5 rounded-lg bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400 flex-shrink-0">
+                      <div className="p-2.5 rounded-lg bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-white flex-shrink-0">
                         <Icon size={20} />
                       </div>
                       <div>
@@ -212,7 +212,7 @@ export default function ProductsPageContent() {
                 href="https://mybox.eco"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 font-semibold hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
+                className="inline-flex items-center gap-2 text-primary-600 dark:text-white font-semibold hover:text-primary-700 dark:hover:text-white/80 transition-colors"
               >
                 mybox.eco
                 <ExternalLink size={16} />
@@ -234,7 +234,7 @@ export default function ProductsPageContent() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2.5 rounded-xl bg-primary-100 dark:bg-primary-900/50">
-                <Battery size={20} className="text-primary-600 dark:text-primary-400" />
+                <Battery size={20} className="text-primary-600 dark:text-white" />
               </div>
               <span className="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider">
                 {t("ac.subtitle")}
@@ -281,7 +281,7 @@ export default function ProductsPageContent() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2.5 rounded-xl bg-amber-100 dark:bg-amber-900/50">
-                <Zap size={20} className="text-amber-600 dark:text-amber-400" />
+                <Zap size={20} className="text-amber-600 dark:text-white" />
               </div>
               <span className="text-sm font-semibold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
                 {t("dc.subtitle")}
