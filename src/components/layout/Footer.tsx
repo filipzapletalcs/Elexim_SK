@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import { Link, type Pathname } from "@/i18n/routing";
 import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 
 export default function Footer() {
@@ -46,12 +46,12 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h3 className="font-semibold text-secondary-900 dark:text-white mb-4">{footer("quickLinks")}</h3>
             <ul className="space-y-3">
-              {[
-                { href: "/", label: nav("home") },
-                { href: "/sluzby", label: nav("services") },
-                { href: "/produkty", label: nav("products") },
-                { href: "/kontakt", label: nav("contact") },
-              ].map((item) => (
+              {([
+                { href: "/" as const, label: nav("home") },
+                { href: "/sluzby" as const, label: nav("services") },
+                { href: "/produkty" as const, label: nav("products") },
+                { href: "/kontakt" as const, label: nav("contact") },
+              ] as const).map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
