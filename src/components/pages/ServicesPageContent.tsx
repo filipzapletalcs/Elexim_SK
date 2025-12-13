@@ -56,6 +56,7 @@ export default function ServicesPageContent() {
             loop
             muted
             playsInline
+            aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover scale-105"
           >
             <source src="/post-360-web-final.mp4" type="video/mp4" />

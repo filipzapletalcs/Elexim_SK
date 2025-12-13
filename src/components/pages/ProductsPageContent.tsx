@@ -38,6 +38,7 @@ export default function ProductsPageContent() {
             loop
             muted
             playsInline
+            aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover scale-105"
           >
             <source src="/profi-360.mp4" type="video/mp4" />

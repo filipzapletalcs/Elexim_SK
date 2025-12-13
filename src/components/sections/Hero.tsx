@@ -21,6 +21,7 @@ export default function Hero() {
           loop
           muted
           playsInline
+          aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/video-web-2.mp4" type="video/mp4" />
@@ -57,7 +58,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg sm:text-xl text-white/70 leading-relaxed mb-10 max-w-2xl"
+            className="text-lg sm:text-xl text-white/90 leading-relaxed mb-10 max-w-2xl"
           >
             {t("subtitle")}
           </motion.p>
