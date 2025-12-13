@@ -118,7 +118,7 @@ export default function Footer() {
                 href="https://elexim.net"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-600 dark:text-white hover:text-primary-700 dark:hover:text-white/80 transition-colors"
+                className="text-primary-600 dark:text-white hover:text-primary-700 dark:hover:text-white/80 transition-colors underline underline-offset-2"
               >
                 ELEXIM a.s.
               </a>
