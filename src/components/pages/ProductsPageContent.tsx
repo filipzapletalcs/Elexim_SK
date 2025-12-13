@@ -129,6 +129,7 @@ export default function ProductsPageContent() {
                   src="/mybox_vila_home_cam_6_3k_final.jpg"
                   alt="MyBox"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-950/60 via-transparent to-transparent" />

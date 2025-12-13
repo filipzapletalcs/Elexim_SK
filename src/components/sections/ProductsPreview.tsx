@@ -72,6 +72,7 @@ export default function ProductsPreview() {
                       src={product.image}
                       alt={t(`${product.key}.name`)}
                       fill
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                       className="object-contain p-2 sm:p-4 group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -128,6 +129,7 @@ export default function ProductsPreview() {
                     src="/hyc_200_bok-png.webp"
                     alt="Alpitronic HYC"
                     fill
+                    sizes="(max-width: 1024px) 192px, 256px"
                     className="object-contain group-hover:scale-105 transition-transform duration-500 drop-shadow-2xl"
                   />
                 </div>

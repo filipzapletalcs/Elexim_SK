@@ -270,6 +270,7 @@ export default function ServicesPageContent() {
                         src={service.image}
                         alt={t(`${service.key}.title`)}
                         fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
                         className={service.key === "integration" ? "object-contain p-4" : "object-cover"}
                       />
                       {service.key !== "integration" && (

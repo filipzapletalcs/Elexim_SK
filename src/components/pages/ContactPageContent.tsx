@@ -29,6 +29,7 @@ export default function ContactPageContent() {
             src="/mybox_post_venkovni_parkoviste_cam_7_3k_final.jpg"
             alt=""
             fill
+            sizes="100vw"
             className="object-cover"
           />
         </div>
