@@ -100,7 +100,7 @@ export default function Footer() {
             <h3 className="font-semibold text-secondary-900 dark:text-white mb-2">ELEXIM SK, s.r.o.</h3>
             <p className="text-secondary-600 dark:text-white/90 text-sm">IČO: 51818612</p>
             <p className="text-secondary-600 dark:text-white/90 text-sm mb-4">DIČ: SK2120801155</p>
-            <p className="text-secondary-500 dark:text-white/90 text-xs leading-relaxed">
+            <p className="text-secondary-600 dark:text-white/90 text-xs leading-relaxed">
               Spoločnosť zapísaná v OR Bratislava I, vložka č. 140527/B
             </p>
           </div>
@@ -109,10 +109,10 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-secondary-200 dark:border-white/10 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-secondary-500 dark:text-white/90 text-sm">
+            <p className="text-secondary-600 dark:text-white/90 text-sm">
               &copy; {currentYear} ELEXIM SK, s.r.o. {footer("copyright")}
             </p>
-            <span className="text-secondary-500 dark:text-white/90 text-sm">
+            <span className="text-secondary-600 dark:text-white/90 text-sm">
               Materská spoločnosť{" "}
               <a
                 href="https://elexim.net"
