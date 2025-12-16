@@ -8,7 +8,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import type { Metadata } from "next";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://elexim.sk";
+// Use www version for consistent canonical URLs
+const siteUrl = "https://www.elexim.sk";
 
 export async function generateMetadata({
   params,

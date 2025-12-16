@@ -2,7 +2,8 @@ import { MetadataRoute } from "next";
 import { locales, type Locale } from "@/i18n/config";
 import { pathnames, type Pathname } from "@/i18n/routing";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://elexim.sk";
+// Use www version for consistent canonical URLs
+const siteUrl = "https://www.elexim.sk";
 
 // Helper to get localized path
 function getLocalizedPath(pathname: Pathname, locale: Locale): string {
